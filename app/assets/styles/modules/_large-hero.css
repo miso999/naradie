@@ -1,0 +1,110 @@
+.large-hero {
+  position: relative;
+
+  & .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    display: block;
+    background: rgba(0, 0, 0, .6);
+  }
+
+  @mixin atMedium {
+    height:700px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0, .2);
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text-content {
+    padding-top: 28px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba($mainColor, .15);
+
+
+    @mixin atMedium {
+      padding-top: 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    font-size: rem(29);
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+
+    @mixin atSmall {
+      font-size: rem(64);
+    }
+
+  }
+
+
+  &__description {
+    color: #FFF;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .2);
+    max-width: rem(700);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    letter-spacing: rem(2);
+    @mixin atSmall {
+      font-size: rem(18);
+    }
+  }
+
+  &__effect {
+    position: absolute;
+    overflow: hidden;
+    height: 90px;
+    z-index: 1;
+    bottom: 0;
+    left:0;
+    width:100%;
+
+    &  span {
+      width: 55%;
+      height: 90px;
+      position: absolute;
+      left: -10px;
+      bottom: 0;
+      background: #ffffff;
+      transform: rotate(3deg) translate(3px, 45px);
+
+      &:last-child {
+        left: auto;
+        right: -10px;
+        transform: rotate(-3deg) translate(-3px, 45px);
+      }
+    }
+  }
+
+
+
+
+}

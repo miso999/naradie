@@ -1,0 +1,9 @@
+.hidden-xs {
+  @mixin extraSmall {
+    display: none !important;
+  }
+}
+
+.img-responsive {
+  width:100%;
+}

@@ -1,0 +1,55 @@
+.tabswitcher {
+
+  text-align: center;
+  margin: 0 auto;
+
+  &__menu {
+    border-bottom: 3px dashed #ccc;
+    margin-bottom: 30px;
+
+    & li {
+      display: inline-block;
+      list-style-type: none;
+      padding: 5px;
+
+      @mixin atMedium {
+        padding: 20px;
+      }
+
+      & a {
+        color: #555;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 5px 10px;
+        border: 0;
+        border-radius: 3px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        display: block;
+        border:1px solid $mainColor;
+
+        @mixin atMedium {
+          padding: 10px 16px;
+        }
+
+
+        &.active {
+          background: $mainColor;
+          color: #fff;
+        }
+
+      }
+    }
+  }
+
+  &__tab {
+    display: none;
+    
+    &--active {
+      display: block;
+    }
+  }
+}
+

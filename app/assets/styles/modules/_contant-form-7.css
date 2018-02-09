@@ -1,0 +1,10 @@
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+    border: 1px solid $mainOrange;
+    padding: 10px;
+}
+
+div.wpcf7-mail-sent-ok {
+    border: 1px solid $mainColor;
+    padding: 10px;
+}

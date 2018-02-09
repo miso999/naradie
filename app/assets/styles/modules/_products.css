@@ -1,0 +1,53 @@
+.products {
+
+    img {
+      margin:20px 5px;
+        @mixin atSmall {
+            margin:10px 30px;
+        }
+    }
+
+  &__description {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+  }
+
+
+  &__picture {
+    white-space: nowrap;
+
+    & img {
+      vertical-align: middle;
+      margin-bottom:10px;
+
+
+      &.border {
+        border: 1px solid #ccc;
+
+      }
+    }
+  }
+
+  &__video {
+
+    iframe {
+      width:100%;
+      height:312px;
+    }
+    @mixin atMedium {
+      width: 555px;
+      margin: 0 auto;
+      margin-top: 30px;
+
+
+    }
+  }
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}

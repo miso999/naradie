@@ -1,0 +1,88 @@
+/* Do not edit modules/_sprite directly as it is generated automatically by Gulp.
+Instead edit gulp/templates/sprite */
+
+    .icon {
+      background-image: url('images/sprites/sprite-e8f37df9.svg');
+    }
+
+    .no-svg .icon {
+      background-image: url('images/sprites/sprite-e8f37df9.png');
+    }
+
+  .icon--clear-view-escapes {
+    width: 144.4px;
+    height: 61.53px;
+    background-position: 0 50.34386658875354%;
+  }
+
+  .icon--comment {
+    width: 66px;
+    height: 66px;
+    background-position: 70.72243346007605% 79.60091743119266%;
+  }
+
+  .icon--facebook {
+    width: 23.23px;
+    height: 44.01px;
+    background-position: 68.80988978644079% 46.66861119213301%;
+  }
+
+  .icon--fire {
+    width: 58px;
+    height: 66px;
+    background-position: 22.878228782287824% 79.60091743119266%;
+  }
+
+  .icon--globe {
+    width: 66px;
+    height: 66px;
+    background-position: 45.627376425855516% 79.60091743119266%;
+  }
+
+  .icon--instagram {
+    width: 44.01px;
+    height: 44.01px;
+    background-position: 92.28393978736096% 73.36139005791908%;
+  }
+
+  .icon--mail {
+    width: 66px;
+    height: 50px;
+    background-position: 54.90494296577947% 47.863247863247864%;
+  }
+
+  .icon--rain {
+    width: 66px;
+    height: 66px;
+    background-position: 100% 0;
+  }
+
+  .icon--star {
+    width: 66px;
+    height: 66px;
+    background-position: 100% 30.275229357798164%;
+  }
+
+  .icon--travniky {
+    width: 263px;
+    height: 112px;
+    background-position: 0 0;
+  }
+
+  .icon--twitter {
+    width: 53.78px;
+    height: 44.06px;
+    background-position: 95.55991570380058% 55.01375343835959%;
+  }
+
+  .icon--wifi {
+    width: 62px;
+    height: 66px;
+    background-position: 0 79.60091743119266%;
+  }
+
+  .icon--youtube {
+    width: 36.75px;
+    height: 44px;
+    background-position: 0 99.80416666666666%;
+  }
