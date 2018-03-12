@@ -30,18 +30,14 @@
 
     <header class="site-header">
         <div class="wrapper">
-            <div class="site-header__logo">
-                <div class="site-header__logo__graphic icon icon--travniky"></div>
-            </div>
+
 
             <div class="site-header__menu-icon">
                 <div class="site-header__menu-icon__middle"></div>
             </div>
 
             <div class="site-header__menu-content">
-                <div class="site-header__btn-container">
-                    <a href="#" class="btn btn--orange open-modal" data-modal-id="get-in-touch">Kontakt</a>
-                </div>
+
                 <nav class="primary-nav primary-nav--pull-right">
                     <ul>
                         <li><a href="#our-beginning" id="our-beginning-link">O nás</a></li>

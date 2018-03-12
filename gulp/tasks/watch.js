@@ -5,7 +5,7 @@ browserSync = require('browser-sync').create();
 gulp.task('watch', function() {
 
   browserSync.init({
-      proxy   : "http://futbalovetravniky.dev/",
+      proxy   : "http://naradie.dev/",
     notify: false,
 
   });

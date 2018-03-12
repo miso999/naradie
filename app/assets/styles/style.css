@@ -3,7 +3,6 @@
 @import "base/_mixins";
 @import "base/_global";
 @import "base/_helpers";
-@import "modules/_large-hero";
 @import "modules/_btn";
 @import "modules/_wrapper";
 @import "modules/_page-section";
@@ -24,3 +23,4 @@
 @import "modules/_products";
 @import "modules/_tabswticher";
 @import "modules/_contant-form-7";
+@import "modules/_product-item";

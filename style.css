@@ -476,7 +476,7 @@ textarea {
 
 button {
   padding: 0.75rem 1.2rem;
-  background: #06520f;
+  background: #568f1c;
   font-size: 1.0625rem;
   font-weight: 400;
   border-radius: 0.25rem;
@@ -496,150 +496,28 @@ button {
   width:100%;
 }
 
-.large-hero {
-  position: relative;
-
-
-
-
-}
-
-.large-hero .after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #FFF;
-    display: block;
-    background: rgba(0, 0, 0, .6);
-  }
-
-@media (min-width: 50rem) {
-
-.large-hero {
-    height:43.75rem;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.2)
-
-
-
-
-}
-  }
-
-.large-hero__image {
-    display: block;
-    width: 100%;
-  }
-
-.large-hero__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0, .2);
-    width: 100%;
-    height: 100%;
-  }
-
-.large-hero__text-content {
-    padding-top: 1.75rem;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    left: 0;
-    width: 100%;
-    text-align: center;
-    background: rgba(6,82,15, .15);
-  }
-
-@media (min-width: 50rem) {
-
-.large-hero__text-content {
-      padding-top: 1.25rem
-  }
-  }
-
-.large-hero__title {
-    font-weight: 700;
-    color: #fff;
-    margin: 0;
-    font-size: 1.8125rem;
-    letter-spacing: -0.0625rem;
-    text-shadow: 0.125rem 0.125rem 0 rgba(0, 0, 0, .1);
-
-  }
-
-@media (min-width: 33.125rem) {
-
-.large-hero__title {
-      font-size: 4rem
-
-  }
-  }
-
-.large-hero__description {
-    color: #FFF;
-    font-size: 1.1rem;
-    font-weight: 300;
-    text-shadow: 0.125rem 0.125rem 0 rgba(0, 0, 0, .2);
-    max-width: 43.75rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0.3125rem;
-    letter-spacing: 0.125rem;
-  }
-
-@media (min-width: 33.125rem) {
-
-.large-hero__description {
-      font-size: 1.125rem
-  }
-  }
-
-.large-hero__effect {
-    position: absolute;
-    overflow: hidden;
-    height: 5.625rem;
-    z-index: 1;
-    bottom: 0;
-    left:0;
-    width:100%;
-  }
-
-.large-hero__effect  span {
-      width: 55%;
-      height: 5.625rem;
-      position: absolute;
-      left: -0.625rem;
-      bottom: 0;
-      background: #ffffff;
-      -webkit-transform: rotate(3deg) translate(0.1875rem, 2.8125rem);
-              transform: rotate(3deg) translate(0.1875rem, 2.8125rem);
-    }
-
-.large-hero__effect  span:last-child {
-        left: auto;
-        right: -0.625rem;
-        -webkit-transform: rotate(-3deg) translate(-0.1875rem, 2.8125rem);
-                transform: rotate(-3deg) translate(-0.1875rem, 2.8125rem);
-      }
-
 .btn {
-  background-color: #06520f;
+  background-color: #568f1c;
   color: #FFF;
   text-decoration: none;
   padding: .75rem 1.2rem;
   display: inline-block;
   font-size: 1.0625rem;
   font-weight: 400;
-  border-radius: 0.25rem;
   border:0;
   cursor: pointer;
   text-transform: uppercase;
+    margin: 0.3125rem 0;
 
 }
+
+@media (min-width: 50rem) {
+
+.btn {
+        margin: 0rem
+
+}
+  }
 
 .btn--orange {
     background-color: #d59541;
@@ -655,6 +533,14 @@ button {
       font-size: 1.25rem
   }
   }
+
+.btn--fullwidth {
+
+ width:100%;
+    text-align: center;
+
+
+}
 
 .wrapper {
   overflow: hidden;
@@ -773,13 +659,13 @@ button {
 .headline {
   font-size: 1.9rem;
   font-weight: 300;
-  color: #06520f;
+  color: #333333;
 }
 
 @media (min-width: 33.125rem) {
 
 .headline {
-    font-size: 2.875rem
+    font-size: 1.875rem
 }
   }
 
@@ -982,7 +868,7 @@ button {
 @media (min-width: 33.125rem) {
 
 .generic-content-container p {
-      font-size: 1.125rem
+      font-size: 1rem
   }
   }
 
@@ -1011,7 +897,7 @@ button {
   }
 
 .section-title--blue {
-    color: #06520f;
+    color: #568f1c;
   }
 
 .section-title--less-margin {
@@ -1110,7 +996,7 @@ button {
   }
 
 .testimonial__title {
-    color: #06520f;
+    color: #568f1c;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
@@ -1215,7 +1101,7 @@ Instead edit gulp/templates/sprite */
   }
 
 .site-footer {
-  background-color: #06520f;
+  background-color: #568f1c;
   color: #FFF;
   padding: .5rem 0;
   text-align: center;
@@ -1238,7 +1124,6 @@ Instead edit gulp/templates/sprite */
 
 .site-header {
   padding: 0.625rem 0;
-  position: absolute;
   width: 100%;
   z-index: 2;
   -webkit-transition: background-color .3s ease-out;
@@ -1246,7 +1131,7 @@ Instead edit gulp/templates/sprite */
 }
 
 .site-header--expanded {
-    background-color: rgba(6,82,15, .96);
+    background-color: rgba(86,143,28, .96);
     z-index: 5;
 
   }
@@ -1254,12 +1139,12 @@ Instead edit gulp/templates/sprite */
 @media (min-width: 50rem) {
 
 .site-header {
-    background-color: rgba(6,82,15, .0);
-    position: fixed
+    background-color: #fff
 }
 
+
     .site-header--dark {
-      background-color: rgba(6,82,15, .96);
+      background-color: rgba(86,143,28, .96);
     }
   }
 
@@ -1278,7 +1163,7 @@ Instead edit gulp/templates/sprite */
             transform: translateX(-50%) scale(.3);
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
-    background-color: #06520f;
+    background-color: #568f1c;
     padding: 1.5625rem 2.25rem;
     -webkit-transition: -webkit-transform .3s ease-out;
     transition: -webkit-transform .3s ease-out;
@@ -1474,9 +1359,9 @@ Instead edit gulp/templates/sprite */
   }
 
 .primary-nav a {
-    background-color: rgba(6,82,15, 1);
+    background-color: rgba(86,143,28, 1);
     font-size: .8rem;
-    color: #FFF;
+    color: #333;
     font-weight: 400;
     text-decoration: none;
     display: block;
@@ -1548,7 +1433,7 @@ Instead edit gulp/templates/sprite */
     right: 0.9375rem;
     top: 0.9375rem;
     font-size:2rem;
-    color: #06520f;
+    color: #568f1c;
     -webkit-transform: scaleX(1.2);
             transform: scaleX(1.2);
     -webkit-transform-origin: 100% 0;
@@ -1624,7 +1509,7 @@ Instead edit gulp/templates/sprite */
   }
 
 .service__title {
-    color: #06520f;
+    color: #568f1c;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
@@ -1727,7 +1612,7 @@ Instead edit gulp/templates/sprite */
         text-decoration: none;
         cursor: pointer;
         display: block;
-        border:0.0625rem solid #06520f;
+        border:0.0625rem solid #568f1c;
 
       }
 
@@ -1740,7 +1625,7 @@ Instead edit gulp/templates/sprite */
   }
 
 .tabswitcher__menu li a.active {
-          background: #06520f;
+          background: #568f1c;
           color: #fff;
         }
 
@@ -1759,6 +1644,43 @@ div.wpcf7-acceptance-missing {
 }
 
 div.wpcf7-mail-sent-ok {
-    border: 0.0625rem solid #06520f;
+    border: 0.0625rem solid #568f1c;
     padding: 0.625rem;
 }
+
+.product-item {
+
+margin-top:0rem;
+
+}
+
+@media (min-width: 50rem) {
+
+.product-item__picture {
+    float: left;
+    width:50%
+
+}
+  }
+
+.product-item__description {
+
+ padding-top: 0.625rem;
+}
+
+@media (min-width: 50rem) {
+
+.product-item__description {
+        float: left;
+        padding: 0 0.625rem;
+        width:50%
+}
+  }
+
+.product-item__description h2 {
+        padding:0;
+        margin:0;
+        font-size:1.5rem;
+        font-weight: 200;
+        color: #568f1c;
+    }
