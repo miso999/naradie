@@ -1,18 +1,47 @@
 .site-footer {
-  background-color: $mainColor;
+  background-color: $darkColor;
   color: #FFF;
   padding: .5rem 0;
   text-align: center;
 
-  &__text {
+  &__subtitle {
+    margin-top: 20px;
+     color: #fff;
+     font-weight:100;
+     font-size: 16px;
+     text-align: left;
+
+    hr {
+      color: $mainColor !important;
+      margin-top: 10px;
+      margin-bottom:5px;
+      text-align: left;
+      margin-left:0;
+    }
+
+  }
+
+  &__content {
+     font-size:12px;
+     font-weight:100;
+     text-align: left;
+   }
+
+  &__copyright {
     display: block;
     margin-bottom: 1rem;
-    font-weight: 200;
+    font-weight: 100;
+    font-size:14px;
+    margin-top: 50px;
 
-    @mixin atMedium {
-      display: inline;
-      margin-bottom: 0;
-      margin-right: 1.4rem;
-    }
+      @mixin atMedium {
+        margin-bottom: 0;
+        margin-right: 1.4rem;
+      }
   }
+
+  &__gmap {
+     margin-top:10px;
+
+   }
 }

@@ -6,6 +6,14 @@
     padding-top: 40px;
   }
 
+   &--mobile-padding > div{
+      margin-top:40px;
+
+      @mixin atSmall {
+        margin-top: 0;
+      }
+   }
+
   &--gutters {
     margin-right: -65px;
   }
@@ -38,6 +46,21 @@
 
     &__b-margin-until-medium {
       margin-bottom: 0;
+    }
+
+  &__medium-1 {
+     float: left;
+     width:8.3%;
+   }
+
+  &__medium-1--larger {
+     float: left;
+     width:12.3%;
+   }
+
+    &__medium-2 {
+       float: left;
+       width:16.6%;
     }
 
     &__medium-3 {

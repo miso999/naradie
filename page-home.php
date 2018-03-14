@@ -6,6 +6,11 @@ Template Name: Home Page
 get_header(); ?>
 
 
+<div style="height:450px;background:url('<?php echo get_template_directory_uri(); ?>/images/lawn.jpg');background-size: cover;
+        background-position-y: 550px;">
+</div>
+
+
     <div id="our-beginning" class="page-section page-section--stripe" data-section-link="#our-beginning-link"
          style="position: relative;">
         <div class="wrapper">
@@ -14,7 +19,7 @@ get_header(); ?>
 
                 <div class="row__medium-8 row__medium-8--smaller">
                     <div class="generic-content-container">
-                        <h2 class="headline headline--no-t-margin headline--b-margin-small">Predaj a servis záhradnej a komunálnej techniky</h2>
+                        <h2 class="first-headline headline headline--no-t-margin headline--b-margin-small">Predaj a servis záhradnej a komunálnej techniky</h2>
 
                         <p>Sme jedna z mála predajní na Slovensku so širokým sortimentom záhradnej techniky, ktorá ponúka zároveň aj kvalitný záručný a pozáručný servis, predaj náhradných dielov a poradenstvo. Zabezpečujeme taktiež odborné zaškolenie používania predávanej techniky. Nájdete nás v predajni v Krušovciach, neďaleko Topoľčian.</p>
                     </div>
@@ -36,7 +41,7 @@ get_header(); ?>
 
     <div id="products" class="page-section" data-section-link="#our-beginning-link" style="position: relative;">
         <div class="wrapper">
-            <div class="row">
+            <div class="row row--mobile-padding">
 
                 <div class="row__medium-6 row__medium-6--smaller">
                     <div class="product-item">
@@ -184,17 +189,40 @@ get_header(); ?>
         </div>
     </div>
 
+<div class="wrapper">
+    <div class="separator"></div>
+</div>
 
-    <div id="kontakt" class="page-section page-section--stripe lazy lazy-hidden" data-section-link="#testimonials-link">
+
+    <div id="najoblubenejsie" class="page-section  lazy lazy-hidden" data-section-link="#testimonials-link">
         <div class="wrapper ">
-            <h2 class="section-title">Kontaktujte <strong>nás</strong>
+            <h2 class="headline headline--centered headline--no-t-margin headline--b-margin-small">Najpožičiavanejšie produkty
             </h2>
             <hr>
 
-            <h2 class="headline headline--small headline--centered headline--no-t-margin "> Neváhajte nás kontaktovať s vašou požiadavkou </h2>
+         <div class="row row--gutters row--mobile-padding">
+             <div class="row__medium-3">
+                 <div class="fav-item">
+                     <img class="img-responsive" src="https://placehold.it/300x300">
+                     <div class="fav-item__title">
+                         Vertikutátor WolfGarten VA 378 E
+                     </div>
+                     <div class="fav-item__price">
+                         20 &euro; / deň
+                     </div>
+                 </div>
 
-
-            <?php echo do_shortcode('[contact-form-7 id="28" title="Kontaktný formulár"]'); ?>
+             </div>
+             <div class="row__medium-3">
+                 <img class="img-responsive" src="https://placehold.it/300x300">
+             </div>
+             <div class="row__medium-3">
+                 <img class="img-responsive" src="https://placehold.it/300x300">
+             </div>
+             <div class="row__medium-3">
+                 <img class="img-responsive" src="https://placehold.it/300x300">
+             </div>
+         </div>
 
         </div>
 
