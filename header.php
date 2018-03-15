@@ -67,30 +67,100 @@
 
         <div class="wrapper white-menu">
 
+            <nav class="primary-nav primary-nav--pull-right">
+                <ul >
+
+                    <li class="submenu"><a>Záhradná technika</a>
+
+                        <div class="submenu__separator">
+
+                        </div>
+                        <div class="submenu__content">
+                            <div class="wrapper wrapper--medium">
+
+                                <div class="row">
+                                <div class="row__medium-4">
+                                    <h4>Starostlivosť o trávnik</h4>
+                                    <ul class="submenu__list">
+                                        <li>Aerifikátory</li>
+                                        <li>Kosačky</li>
+                                        <li>Vertikutátory</li>
+
+                                    </ul>
+
+                                    <h4>Ďaľšia kategória</h4>
+                                    <ul class="submenu__list">
+                                        <li>Rozmetadlá</li>
+                                        <li>Krovinorezy</li>
+                                        <li>Zberače</li>
+                                        <li>Snehové frézy</li>
+                                    </ul>
+                                </div>
+
+                                <div class="row__medium-4">
+                                    <h4>Ostatná technika</h4>
+                                    <ul class="submenu__list">
+                                        <li>Motorové píly</li>
+                                        <li>Sondírky</li>
+                                        <li>Štiepačky</li>
+                                        <li>Zametacie kefy</li>
+                                    </ul>
+
+                                    <h4>Práca s drevom</h4>
+                                    <ul class="submenu__list">
+                                        <li>Drviče konárov</li>
+                                        <li>Zberače</li>
+                                        <li>Zaťahovacie siete</li>
+                                        <li>Záhradné valce</li>
+                                    </ul>
+                                </div>
+
+                                    <div class="row__medium-4">
+                                        <h4>Starostlivosť o trávnik</h4>
+                                        <ul class="submenu__list">
+                                            <li>Aerifikátory</li>
+                                            <li>Kosačky</li>
+                                            <li>Vertikutátory</li>
+
+                                        </ul>
+
+                                        <h4>Ďaľšia kategória</h4>
+                                        <ul class="submenu__list">
+                                            <li>Rozmetadlá</li>
+                                            <li>Krovinorezy</li>
+                                            <li>Zberače</li>
+                                            <li>Snehové frézy</li>
+                                        </ul>
+                                    </div>
 
 
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </li>
+                    <li><a>Stavebné náradie</a></li>
+                    <li><a>Iné</a></li>
+                    <li><a>Pripravujeme</a></li>
+                    <li><a>Cenník</a></li>
+                    <li><a>Kontakt</a></li>
+
+
+                </ul>
+
+
+            </nav>
 
             <div class="site-header__menu-icon">
                 <div class="site-header__menu-icon__middle"></div>
             </div>
 
-            <div class="site-header__menu-content">
-
-                <nav class="primary-nav primary-nav--pull-right">
-                    <ul>
-
-                        <li><a href="">Záhradná technika</a></li>
-                        <li><a>Stavebné náradie</a></li>
-                        <li><a>Iné</a></li>
-                        <li><a>Pripravujeme</a></li>
-                        <li><a>Cenník</a></li>
-                        <li><a>Kontakt</a></li>
-                    </ul>
-                </nav>
 
 
-            </div>
-        </div>
+
+
     </header>
 
 

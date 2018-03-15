@@ -1,16 +1,26 @@
 .fav-item {
 
-&__title {
+  &__title {
     color: $darkColor;
     font-weight: 200;
     text-align: center;
-}
+  }
 
-&__price {
+  &__price {
     color: $darkColor;
     font-weight: 400;
     text-align: center;
-     font-size:12px;
-}
+    font-size: 12px;
+  }
 
+  &__picture {
+    height: 250px;
+    position: relative;
+
+    img {
+      max-height: 240px;
+      position: absolute;
+      bottom: 0;
+    }
+  }
 }
