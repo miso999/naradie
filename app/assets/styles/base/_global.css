@@ -30,6 +30,11 @@ hr {
   &.left {
     margin-left: 0;
   }
+
+  &.small {
+    width: 40px;
+
+  }
 }
 
 input {
