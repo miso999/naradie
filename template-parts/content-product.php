@@ -14,7 +14,20 @@
         <div class="row row--t-padding">
 
             <div class="row__medium-4">
-                <h3>Kalendar</h3>
+                <h3>Dostupnosť</h3>
+
+                <?php
+
+                require_once(__DIR__ . '/../class/Calendar.php');
+
+                $c = new Calendar;
+                echo $c->show();
+
+
+
+
+                ?>
+
             </div>
 
             <div class="row__medium-8">
