@@ -5,6 +5,21 @@
  * Date: 16.03.2018
  * Time: 10:04
  */
+
+echo "<br><br>";
+//print_r($_POST);
+
+if ($_POST['start_date'] && $_POST['end_date']) {
+
+    $start_date = date('Y-m-d', strtotime($_POST['start_date']));
+    $end_date = date('Y-m-d', strtotime($_POST['end_date']));
+
+    $wpdb->insert('wp_calendar', array(
+        'start_date' => $start_date,
+        'end_date' => $end_date,
+        'product_id' => '17'
+    ));
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -16,12 +31,14 @@
             <div class="row__medium-4">
                 <h3>Dostupnosť</h3>
 
+                <div class="datepicker"></div>
+
                 <?php
 
                 require_once(__DIR__ . '/../class/Calendar.php');
 
                 $c = new Calendar;
-                echo $c->show();
+//                echo $c->show();
 
                 ?>
 

@@ -94,30 +94,58 @@
     </div>
 </footer>
 
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
+
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/i18n/jquery-ui-i18n.min.js">
 </script>
 
+<?php
+$query = "SELECT start_date, end_date FROM wp_calendar WHERE product_id = 17";
+$dates = $wpdb->get_results($query);
+
+foreach ($dates as $d) {
+    $begin = new DateTime( $d->start_date );
+    $end = new DateTime( $d->end_date );
+    $end = $end->modify( '+1 day' );
+
+    $interval = new DateInterval('P1D');
+    $daterange = new DatePeriod($begin, $interval ,$end);
+
+    foreach($daterange as $date){
+        $booked[] = $date->format("Y-m-d");
+    }
+}
+
+?>
 
 <script>
     $(function () {
-        var array = ["2018-03-14","2018-03-15","2018-03-16"];
+
+        <?php
+
+        $booked = json_encode($booked);
+        echo "var array = ". $booked . ";\n";
+        ?>
+
         var options = $.extend(
             {},                                  // empty object
             $.datepicker.regional["sk"],         // fr regional
-            { dateFormat: "dd MM, yy" /*, ... */ } // your custom options
+            { dateFormat: "dd.mm.yy" /*, ... */ } // your custom options
         );
+        var dateToday = new Date();
         $.datepicker.setDefaults(options);
 
         $('.datepicker').datepicker({
-            beforeShowDay: function(date){
-                var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-                return [ array.indexOf(string) == -1 ]
-            }
+            beforeShowDay: function(date) {
+                if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), array) != -1) {
+                    return [false, 'reserved'];
+                } else {
+                    return [true, ''];
+                }
+            },
+            minDate: dateToday
         });
 
     });
@@ -143,8 +171,8 @@
                         <input name="email" placeholder="E-mail"/>
                     </div>
                     <div class="form-group">
-                        <input name="Student" class="datepicker" placeholder="Prvý deň rezervácie"/>
-                        <input name="Student" class="datepicker" placeholder="Posledný deň rezervácie"/>
+                        <input name="start_date" class="datepicker" placeholder="Prvý deň rezervácie"/>
+                        <input name="end_date" class="datepicker" placeholder="Posledný deň rezervácie"/>
                     </div>
 
                     <input type="submit" value="Odoslat">

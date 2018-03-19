@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82d9048f-00de-4f03-a4d1-849b4c072b4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/styles/modules/_form.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/scripts/App.js" afterPath="$PROJECT_DIR$/app/assets/scripts/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/styles/modules/_modal.css" afterPath="$PROJECT_DIR$/app/assets/styles/modules/_modal.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/styles/style.css" afterPath="$PROJECT_DIR$/app/assets/styles/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/temp/scripts/App.js" afterPath="$PROJECT_DIR$/app/temp/scripts/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/temp/scripts/Vendor.js" afterPath="$PROJECT_DIR$/app/temp/scripts/Vendor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/styles/modules/_calendar.css" afterPath="$PROJECT_DIR$/app/assets/styles/modules/_calendar.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template-parts/content-product.php" afterPath="$PROJECT_DIR$/template-parts/content-product.php" />
@@ -22,71 +17,100 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="966">
+              <caret line="54" column="37" lean-forward="false" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="content-product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template-parts/content-product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-441">
+              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding>
+                <marker date="1521492163235" expanded="true" signature="555:786" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="597:786" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="638:786" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="965:1574" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="1009:1574" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="1060:1574" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="1113:1321" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="1177:1290" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="1374:1574" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="1436:1574" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="2018:2546" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="2136:2293" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="2363:2509" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="2609:2765" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="2830:2961" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="3243:3572" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="3300:3572" ph="..." />
+                <marker date="1521492163235" expanded="true" signature="4469:4535" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_contant-form-7.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/styles/modules/_contant-form-7.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/scripts/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="46" lean-forward="true" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_site-footer.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/styles/modules/_site-footer.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-479">
-              <caret line="111" column="15" lean-forward="true" selection-start-line="111" selection-start-column="15" selection-end-line="111" selection-end-column="15" />
+            <state relative-caret-position="321">
+              <caret line="144" column="32" lean-forward="false" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
+              <folding>
+                <marker date="1521492335793" expanded="true" signature="3423:3474" ph="SELECT start... wp_calendar" />
+                <marker date="1521492335793" expanded="true" signature="3423:3489" ph="SELECT start... wp_calendar" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_calendar.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/styles/modules/_calendar.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="178" column="1" lean-forward="false" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/styles/modules/_form.css">
+      <file leaf-file-name="Calendar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class/Calendar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="148" column="45" lean-forward="true" selection-start-line="147" selection-start-column="11" selection-end-line="148" selection-end-column="45" />
+              <folding>
+                <element signature="e#6#87#0#PHP" expanded="true" />
+                <marker date="1521403709959" expanded="true" signature="3210:3248" ph="SELECT COUNT... wp_calendar" />
+                <marker date="1521403709959" expanded="true" signature="3210:3250" ph="SELECT COUNT... wp_calendar" />
+                <marker date="1521403709959" expanded="true" signature="3210:3301" ph="SELECT COUNT... wp_calendar" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_global.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/styles/base/_global.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1512">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding>
+                <marker date="1521379328948" expanded="true" signature="194:206" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_helpers.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/styles/base/_helpers.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_row.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/styles/modules/_row.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -95,28 +119,28 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+            <state relative-caret-position="0">
+              <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_modal.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/styles/modules/_modal.css">
+      <file leaf-file-name="_btn.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/styles/modules/_btn.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+            <state relative-caret-position="714">
+              <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Modal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/scripts/modules/Modal.js">
+      <file leaf-file-name="_variables.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/styles/base/_variables.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="50" />
+            <state relative-caret-position="21">
+              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -219,14 +243,14 @@
         <option value="$PROJECT_DIR$/app/assets/styles/base/_global.css" />
         <option value="$PROJECT_DIR$/app/assets/styles/modules/_product-page.css" />
         <option value="$PROJECT_DIR$/class/Calendar.php" />
-        <option value="$PROJECT_DIR$/app/assets/styles/modules/_calendar.css" />
         <option value="$PROJECT_DIR$/app/assets/styles/base/_variables.css" />
         <option value="$PROJECT_DIR$/app/assets/scripts/App.js" />
         <option value="$PROJECT_DIR$/app/assets/styles/modules/_modal.css" />
-        <option value="$PROJECT_DIR$/template-parts/content-product.php" />
         <option value="$PROJECT_DIR$/app/assets/styles/style.css" />
         <option value="$PROJECT_DIR$/app/assets/styles/modules/_form.css" />
+        <option value="$PROJECT_DIR$/template-parts/content-product.php" />
         <option value="$PROJECT_DIR$/footer.php" />
+        <option value="$PROJECT_DIR$/app/assets/styles/modules/_calendar.css" />
       </list>
     </option>
   </component>
@@ -270,7 +294,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -295,13 +318,6 @@
               <item name="naradie" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="naradie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="naradie" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="styles" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -312,17 +328,23 @@
               <item name="styles" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="naradie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="naradie" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="template-parts" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/assets/styles" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="SearchEverywhereHistoryKey" value="r&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/modules/_row.css&#10;modal&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/modules/_modal.css&#10;foote&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/footer.php&#10;content&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/template-parts/content-product.php&#10;calendar&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/class/Calendar.php&#10;var&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/base/_variables.css&#10;global&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/base/_global.css&#10;fav&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/modules/_fav-item.css&#10;PAGE&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/page-home.php&#10;wra&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/modules/_wrapper.css&#10;wrapp&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/modules/_wrapper.css&#10;helper&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/base/_helpers.css&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/header.php&#10;site-content&#9;null&#9;null&#10;hea&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/modules/_site-header.css&#10;heade&#9;FILE&#9;file://C:/xampp/htdocs/travniky/wp-content/themes/futbalove_travniky/header.php&#10;index&#9;FILE&#9;file://C:/xampp/htdocs/travniky/wp-content/themes/futbalove_travniky/index.php" />
+    <property name="SearchEverywhereHistoryKey" value="footer&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/footer.php&#10;r&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/modules/_row.css&#10;modal&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/modules/_modal.css&#10;foote&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/footer.php&#10;content&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/template-parts/content-product.php&#10;calendar&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/class/Calendar.php&#10;var&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/base/_variables.css&#10;global&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/base/_global.css&#10;fav&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/modules/_fav-item.css&#10;PAGE&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/page-home.php&#10;wra&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/modules/_wrapper.css&#10;wrapp&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/modules/_wrapper.css&#10;helper&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/base/_helpers.css&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/header.php&#10;site-content&#9;null&#9;null&#10;hea&#9;FILE&#9;file://C:/xampp/htdocs/naradie/wp-content/themes/naradie/app/assets/styles/modules/_site-header.css&#10;heade&#9;FILE&#9;file://C:/xampp/htdocs/travniky/wp-content/themes/futbalove_travniky/header.php&#10;index&#9;FILE&#9;file://C:/xampp/htdocs/travniky/wp-content/themes/futbalove_travniky/index.php" />
     <property name="list.type.of.created.stylesheet" value="PostCSS" />
     <property name="settings.editor.selected.configurable" value="settings.css.dialects" />
   </component>
@@ -363,7 +385,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146326000" />
+    <option name="totallyTimeSpent" value="156406000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -378,15 +400,14 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13697916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.49791667" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.46197918" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.53802085" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32671082" sideWeight="0.53802085" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -400,8 +421,8 @@
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.53802085" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -514,7 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="119" column="70" lean-forward="false" selection-start-line="119" selection-start-column="70" selection-end-line="119" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -536,7 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -544,7 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -557,7 +575,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/styles/modules/_product-item.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="42">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
@@ -659,7 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="357" column="25" lean-forward="false" selection-start-line="357" selection-start-column="25" selection-end-line="357" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,7 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -675,7 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-689">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,9 +703,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/styles/base/_global.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="1512">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <marker date="1521379328948" expanded="true" signature="194:206" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -698,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -711,16 +727,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="966">
           <caret line="54" column="37" lean-forward="false" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/styles/modules/_calendar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="89" column="20" lean-forward="true" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -733,20 +741,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/Calendar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="148" column="45" lean-forward="true" selection-start-line="148" selection-start-column="45" selection-end-line="148" selection-end-column="45" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/styles/modules/_btn.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="12" />
+        <state relative-caret-position="714">
+          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -755,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -763,7 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -771,7 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -779,14 +774,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        <state relative-caret-position="0">
+          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -795,15 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="716">
           <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template-parts/content-product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -811,7 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="46" lean-forward="true" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,14 +803,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/Calendar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="148" column="45" lean-forward="true" selection-start-line="147" selection-start-column="11" selection-end-line="148" selection-end-column="45" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+            <marker date="1521403709959" expanded="true" signature="3210:3248" ph="SELECT COUNT... wp_calendar" />
+            <marker date="1521403709959" expanded="true" signature="3210:3250" ph="SELECT COUNT... wp_calendar" />
+            <marker date="1521403709959" expanded="true" signature="3210:3301" ph="SELECT COUNT... wp_calendar" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template-parts/content-product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-441">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <marker date="1521492163235" expanded="true" signature="555:786" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="597:786" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="638:786" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="965:1574" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="1009:1574" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="1060:1574" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="1113:1321" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="1177:1290" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="1374:1574" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="1436:1574" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="2018:2546" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="2136:2293" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="2363:2509" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="2609:2765" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="2830:2961" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="3243:3572" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="3300:3572" ph="..." />
+            <marker date="1521492163235" expanded="true" signature="4469:4535" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-479">
-          <caret line="111" column="15" lean-forward="true" selection-start-line="111" selection-start-column="15" selection-end-line="111" selection-end-column="15" />
+        <state relative-caret-position="321">
+          <caret line="144" column="32" lean-forward="false" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
+          <folding>
+            <marker date="1521492335793" expanded="true" signature="3423:3474" ph="SELECT start... wp_calendar" />
+            <marker date="1521492335793" expanded="true" signature="3423:3489" ph="SELECT start... wp_calendar" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/styles/modules/_calendar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="178" column="1" lean-forward="false" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
           <folding />
         </state>
       </provider>
