@@ -1529,7 +1529,7 @@ display:none;
 .modal {
   position: fixed;
   z-index: 5;
-  background-color: rgba(255,255,255, .98);
+  background-color: rgba(255,255,255, .99);
   top: 0;
   bottom: 0;
   left: 0;
@@ -1541,10 +1541,9 @@ display:none;
 }
 
 .modal__inner {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    //position: absolute;
+    //top: 50%;
+    //transform: translateY(-50%);
     width:100%;
   }
 

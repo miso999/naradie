@@ -23,10 +23,8 @@
                 $c = new Calendar;
                 echo $c->show();
 
-
-
-
                 ?>
+
 
             </div>
 
@@ -65,6 +63,10 @@
 
                             </div>
 
+                            <div class="product-page__order">
+                                <div class="btn btn--fullwidth open-modal" data-modal-id="get-in-touch">Rezervovať</div>
+                            </div>
+
                             <div class="product-page__excerpt">
                                 <?php
                                 if (has_excerpt()) {
@@ -73,6 +75,8 @@
                                 }
                                 ?>
                             </div>
+
+
                         </div>
 
                     </div>
