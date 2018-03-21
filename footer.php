@@ -137,7 +137,13 @@ foreach ($dates as $d) {
         var dateToday = new Date();
         $.datepicker.setDefaults(options);
 
-        $('.datepicker').datepicker({
+
+        $('#start_date').change(function(){
+            $('.start_date').datepicker('setDate', $(this).val());
+        });
+
+
+        $('.start_date').datepicker({
             beforeShowDay: function(date) {
                 if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), array) != -1) {
                     return [false, 'reserved'];
@@ -145,14 +151,15 @@ foreach ($dates as $d) {
                     return [true, ''];
                 }
             },
-            minDate: dateToday
+            minDate: dateToday,
+            altField: '#start_date'
         });
 
     });
 </script>
 
 
-<div class="modal" id="get-in-touch">
+<div class="modal modal--show" id="get-in-touch">
     <div class="modal__inner">
         <div class="wrapper ">
             <h2 class="section-title">Rezervujte si termín</strong>
@@ -164,15 +171,16 @@ foreach ($dates as $d) {
 
             <div class="form">
                 <form action="" method="post" name="registration" class="register">
-                    <div class="form-group">
-                        <input name="meno" placeholder="Meno a priezvisko"/>
-                    </div>
-                    <div class="form-group">
-                        <input name="email" placeholder="E-mail"/>
-                    </div>
-                    <div class="form-group">
-                        <input name="start_date" class="datepicker" placeholder="Prvý deň rezervácie"/>
-                        <input name="end_date" class="datepicker" placeholder="Posledný deň rezervácie"/>
+
+                    <div class="row row--gutters">
+                        <div class="row__medium-6">
+                            <div class="start_date"> </div>
+                            <input id="start_date" class="datepicker" placeholder="Posledný deň rezervácie"/>
+                        </div>
+                        <div class="row__medium-6">
+                            <div class="datepicker"> </div>
+                        </div>
+
                     </div>
 
                     <input type="submit" value="Odoslat">
