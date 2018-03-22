@@ -429,6 +429,7 @@ body {
   font-family: 'Open sans', sans-serif;
   font-weight: 400;
   color: #333;
+  position: relative;
 }
 
 img {
@@ -544,6 +545,12 @@ button {
   height:100%;
   width:100%;
   position:absolute;
+}
+
+.label-middle {
+    display: table-cell;
+    vertical-align: middle;
+    height: 3.125rem;
 }
 
 .btn {
@@ -848,6 +855,11 @@ button {
     .row__medium-4--larger {
       width: 37%;
     }
+
+    .row__medium-5 {
+       float: left;
+       width: 41.66%;
+   }
 
     .row__medium-6 {
       float: left;
@@ -1527,7 +1539,7 @@ display:none;
   }
 
 .modal {
-  position: fixed;
+  position: absolute;
   z-index: 5;
   background-color: rgba(255,255,255, .99);
   top: 0;
@@ -1914,7 +1926,7 @@ margin-top:0rem;
     height: 0;
     position: absolute;
     left: 0;
-    background-color: rgba(241,241,241, .9);
+    background-color: rgba(241,241,241, .97);
     width: 100%;
     padding: 0.625rem;
     -webkit-box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
@@ -2068,132 +2080,32 @@ margin-top:0rem;
 
       }
 
-div#calendar {
-    margin:0rem auto;
-    padding:0rem;
-    width: 100%;
-    font-family:Helvetica, "Times New Roman", Times, serif;
-}
-
-div#calendar div.box {
-    position:relative;
-    top:0rem;
-    left:0rem;
-    width:100%;
-    height:2.5rem;
-    background-color: #f6f6f6;
-    color: #calendarText;
+.ui-datepicker-prev, .ui-datepicker-next {
+    display: inline-block;
+    width: 1.875rem;
+    height: 1.875rem;
     text-align: center;
-    font-weight: bold;
-    display: table;
+    cursor: pointer;
+    background-image: url('http://localhost:3000/wp-content/themes/naradie/images/arrow.png');
+    background-repeat: no-repeat;
+    line-height: 600%;
+    overflow: hidden;
 }
 
-div#calendar div.box-name {
-    display: table-cell;
-    vertical-align: middle;
+.ui-datepicker-prev {
+    float: left;
+    background-position: center -1.875rem;
 }
 
-div#calendar div.header {
-    line-height:2.5rem;
-    vertical-align:middle;
-    position:absolute;
-    left:0.6875rem;
-    top:0rem;
-    width:100%;
-    height:2.5rem;
-    text-align:center;
+.ui-datepicker-next {
+    float: right;
+    background-position: center 0rem;
 }
 
-div#calendar div.header a.prev,div#calendar div.header a.next {
-    position:absolute;
-    top:0rem;
-    height: 1.0625rem;
-    display:block;
-    cursor:pointer;
-    text-decoration:none;
-    color:#FFF;
-}
+.ui-state-default {
+    color: #333;
+    text-decoration: none;
 
-div#calendar div.header span.title {
-    color:#FFF;
-    font-size:1.125rem;
-}
-
-div#calendar div.header a.prev {
-    left:0rem;
-}
-
-div#calendar div.header a.next {
-    right:0rem;
-}
-
-div#calendar div.box-content {
-    border:0.0625rem solid #f6f6f6;
-    border-top:none;
-}
-
-div#calendar ul.label {
-    float:left;
-    margin: 0rem;
-    padding: 0rem;
-    margin-top:0.3125rem;
-    margin-left: 0.3125rem;
-    width: 100%;
-}
-
-div#calendar ul.label li {
-    margin:0rem;
-    padding:0rem;
-    margin-right:2%;
-    float:left;
-    list-style-type:none;
-    width:12%;
-    height:1.875rem;
-    line-height:1.875rem;
-    vertical-align:middle;
-    text-align:center;
-    color:#000;
-    font-size: 0.9375rem;
-    background-color: transparent;
-}
-
-div#calendar ul.dates {
-    float:left;
-    margin: 0rem;
-    padding: 0rem;
-    margin-left: 0.3125rem;
-    margin-bottom: 0.3125rem;
-    width: 100%;
-}
-
-div#calendar ul.dates li {
-    margin:0rem;
-    padding:0rem;
-    margin-right:2%;
-    margin-top: 0.3125rem;
-    line-height:1.875rem;
-    vertical-align:middle;
-    float:left;
-    list-style-type:none;
-    width:12%;
-    height:1.875rem;
-    font-size:0.9375rem;
-    background-color: #f6f6f6;
-    color:#333;
-    text-align:center;
-}
-
-div#calendar ul.dates li.obsadene {
-     background: red;
-     color: #fff;
-     }
-
-:focus {
-    outline:none;
-}
-
-div.clear {
-    clear:both;
 }
 
 .ui-datepicker-title {
@@ -2234,129 +2146,97 @@ div.clear {
     display: none;
 }
 
+.ui-state-disabled {
+    opacity:.3;
+    cursor: default;
+}
+
 .ui-datepicker-calendar .reserved {
     background: red;
+    opacity:1;
+    cursor: default;
+}
+
+.ui-datepicker-calendar .reserved span {
     color: #fff;
-
 }
 
-div#calendar div.box {
-    position:relative;
-    top:0rem;
-    left:0rem;
-    width:100%;
-    height:2.5rem;
-    background-color: #f6f6f6;
-    color: #calendarText;
-    text-align: center;
-    font-weight: bold;
-    display: table;
+.ui-datepicker-current-day {
+    background: #5b9c1f !important;
 }
 
-div#calendar div.box-name {
-    display: table-cell;
-    vertical-align: middle;
+.ui-datepicker-current-day a {
+    color: #fff;
 }
 
-div#calendar div.header {
-    line-height:2.5rem;
-    vertical-align:middle;
-    position:absolute;
-    left:0.6875rem;
-    top:0rem;
-    width:100%;
-    height:2.5rem;
-    text-align:center;
+/* New styles for date range*/
+
+td.ui-state-selected-range a {
+    background: none !important;
+    border: none !important;
 }
 
-div#calendar div.header a.prev,div#calendar div.header a.next {
-    position:absolute;
-    top:0rem;
-    height: 1.0625rem;
-    display:block;
-    cursor:pointer;
-    text-decoration:none;
-    color:#FFF;
+td {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
 }
 
-div#calendar div.header span.title {
-    color:#FFF;
-    font-size:1.125rem;
+td a {
+    text-align: center !important;
 }
 
-div#calendar div.header a.prev {
-    left:0rem;
+.ui-red-start {
+    background: #F29676 !important;
+    border-radius: 50% 0 0 50%;
 }
 
-div#calendar div.header a.next {
-    right:0rem;
+.ui-red-end {
+    background: #F29676;
+    border-radius: 0 50% 50% 0;
 }
 
-div#calendar div.box-content {
-    border:0.0625rem solid #f6f6f6;
-    border-top:none;
+.ui-red-start .ui-state-default,
+.ui-red-end .ui-state-default {
+    border: none !important;
+;
+    background: none !important;
+;
+    font-weight: normal;
+    color: #454545 !important;
+;
 }
 
-div#calendar ul.label {
-    float:left;
-    margin: 0rem;
-    padding: 0rem;
-    margin-top:0.3125rem;
-    margin-left: 0.3125rem;
+.ui-state-selected-range {
+    border: none !important;
+    font-weight: normal;
+    background: #f8c3b1 !important;
+}
+
+.user-details input {
+    margin: 0.3125rem 0;
     width: 100%;
 }
 
-div#calendar ul.label li {
-    margin:0rem;
-    padding:0rem;
-    margin-right:2%;
-    float:left;
-    list-style-type:none;
-    width:12%;
-    height:1.875rem;
-    line-height:1.875rem;
+.user-details label {
+
+    float: left;
+
+    display:inline-block;
     vertical-align:middle;
-    text-align:center;
-    color:#000;
-    font-size: 0.9375rem;
-    background-color: transparent;
 }
 
-div#calendar ul.dates {
-    float:left;
-    margin: 0rem;
-    padding: 0rem;
-    margin-left: 0.3125rem;
-    margin-bottom: 0.3125rem;
-    width: 100%;
+.user-details label span {
+        display:inline-block;
+        vertical-align:middle;
+    }
+
+.user-details span {
+    display: block;
+    overflow: hidden;
+
 }
 
-div#calendar ul.dates li {
-    margin:0rem;
-    padding:0rem;
-    margin-right:2%;
-    margin-top: 0.3125rem;
-    line-height:1.875rem;
-    vertical-align:middle;
-    float:left;
-    list-style-type:none;
-    width:12%;
-    height:1.875rem;
-    font-size:0.9375rem;
-    background-color: #f6f6f6;
-    color:#333;
-    text-align:center;
-}
-
-div#calendar ul.dates li.obsadene {
-     background: red;
-     color: #fff;
- }
-
-:focus {
-    outline:none;
-}
-
-div.clear {
-    clear:both;
+.user-details .start-date-visible, .user-details end-date-visible {
+    display: inline;
 }

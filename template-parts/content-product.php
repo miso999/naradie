@@ -7,12 +7,12 @@
  */
 
 echo "<br><br>";
-//print_r($_POST);
 
-if ($_POST['start_date'] && $_POST['end_date']) {
+if ($_POST['start-date'] && $_POST['end-date'] && !$_POST['range_control']) {
 
-    $start_date = date('Y-m-d', strtotime($_POST['start_date']));
-    $end_date = date('Y-m-d', strtotime($_POST['end_date']));
+    $start_date = date('Y-m-d', strtotime($_POST['start-date']));
+    $end_date = date('Y-m-d', strtotime($_POST['end-date']));
+
 
     $wpdb->insert('wp_calendar', array(
         'start_date' => $start_date,
@@ -26,24 +26,17 @@ if ($_POST['start_date'] && $_POST['end_date']) {
 
     <div class="wrapper">
 
-        <div class="row row--t-padding">
+
 
             <div class="row__medium-4">
                 <h3>Dostupnosť</h3>
-
                 <div class="datepicker"></div>
-
-                <?php
-
-                require_once(__DIR__ . '/../class/Calendar.php');
-
-                $c = new Calendar;
-//                echo $c->show();
-
-                ?>
+                                       <div class="start_date"> </div>
+                </div>
 
 
-            </div>
+
+
 
             <div class="row__medium-8">
 

@@ -1,135 +1,30 @@
-div#calendar {
-    margin:0px auto;
-    padding:0px;
-    width: 100%;
-    font-family:Helvetica, "Times New Roman", Times, serif;
-}
-div#calendar div.box {
-    position:relative;
-    top:0px;
-    left:0px;
-    width:100%;
-    height:40px;
-    background-color: $calendarColor ;
-    color: #calendarText;
+.ui-datepicker-prev, .ui-datepicker-next {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
     text-align: center;
-    font-weight: bold;
-    display: table;
-}
-div#calendar div.box-name {
-    display: table-cell;
-    vertical-align: middle;
-}
-div#calendar div.header {
-    line-height:40px;
-    vertical-align:middle;
-    position:absolute;
-    left:11px;
-    top:0px;
-    width:100%;
-    height:40px;
-    text-align:center;
-}
-div#calendar div.header a.prev,div#calendar div.header a.next {
-    position:absolute;
-    top:0px;
-    height: 17px;
-    display:block;
-    cursor:pointer;
-    text-decoration:none;
-    color:#FFF;
-}
-div#calendar div.header span.title {
-    color:#FFF;
-    font-size:18px;
-}
-div#calendar div.header a.prev {
-    left:0px;
-}
-div#calendar div.header a.next {
-    right:0px;
-}
-div#calendar div.box-content {
-    border:1px solid $calendarColor ;
-    border-top:none;
-}
-div#calendar ul.label {
-    float:left;
-    margin: 0px;
-    padding: 0px;
-    margin-top:5px;
-    margin-left: 5px;
-    width: 100%;
-}
-div#calendar ul.label li {
-    margin:0px;
-    padding:0px;
-    margin-right:2%;
-    float:left;
-    list-style-type:none;
-    width:12%;
-    height:30px;
-    line-height:30px;
-    vertical-align:middle;
-    text-align:center;
-    color:#000;
-    font-size: 15px;
-    background-color: transparent;
-}
-div#calendar ul.dates {
-    float:left;
-    margin: 0px;
-    padding: 0px;
-    margin-left: 5px;
-    margin-bottom: 5px;
-    width: 100%;
-}
-div#calendar ul.dates li {
-    margin:0px;
-    padding:0px;
-    margin-right:2%;
-    margin-top: 5px;
-    line-height:30px;
-    vertical-align:middle;
-    float:left;
-    list-style-type:none;
-    width:12%;
-    height:30px;
-    font-size:15px;
-    background-color: $calendarColor;
-    color:$calendarText;
-    text-align:center;
-
-    &.obsadene {
-     background: red;
-     color: #fff;
-     }
+    cursor: pointer;
+    background-image: url('http://localhost:3000/wp-content/themes/naradie/images/arrow.png');
+    background-repeat: no-repeat;
+    line-height: 600%;
+    overflow: hidden;
 }
 
-:focus {
-    outline:none;
-}
-div.clear {
-    clear:both;
+.ui-datepicker-prev {
+    float: left;
+    background-position: center -30px;
 }
 
+.ui-datepicker-next {
+    float: right;
+    background-position: center 0px;
+}
 
+.ui-state-default {
+    color: #333;
+    text-decoration: none;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 .ui-datepicker-title {
@@ -138,8 +33,6 @@ div.clear {
     padding: 10px 0;
     font-weight: bold;
 }
-
-
 
 .ui-datepicker-calendar {
     margin:0px auto;
@@ -172,117 +65,68 @@ div.clear {
     display: none;
 }
 
+.ui-state-disabled {
+    opacity:.3;
+    cursor: default;
+}
 
 .ui-datepicker-calendar .reserved {
     background: red;
+    opacity:1;
+    cursor: default;
+span {
     color: #fff;
-
 }
-div#calendar div.box {
-    position:relative;
-    top:0px;
-    left:0px;
-    width:100%;
-    height:40px;
-    background-color: $calendarColor ;
-    color: #calendarText;
-    text-align: center;
-    font-weight: bold;
-    display: table;
-}
-div#calendar div.box-name {
-    display: table-cell;
-    vertical-align: middle;
-}
-div#calendar div.header {
-    line-height:40px;
-    vertical-align:middle;
-    position:absolute;
-    left:11px;
-    top:0px;
-    width:100%;
-    height:40px;
-    text-align:center;
-}
-div#calendar div.header a.prev,div#calendar div.header a.next {
-    position:absolute;
-    top:0px;
-    height: 17px;
-    display:block;
-    cursor:pointer;
-    text-decoration:none;
-    color:#FFF;
-}
-div#calendar div.header span.title {
-    color:#FFF;
-    font-size:18px;
-}
-div#calendar div.header a.prev {
-    left:0px;
-}
-div#calendar div.header a.next {
-    right:0px;
-}
-div#calendar div.box-content {
-    border:1px solid $calendarColor ;
-    border-top:none;
-}
-div#calendar ul.label {
-    float:left;
-    margin: 0px;
-    padding: 0px;
-    margin-top:5px;
-    margin-left: 5px;
-    width: 100%;
-}
-div#calendar ul.label li {
-    margin:0px;
-    padding:0px;
-    margin-right:2%;
-    float:left;
-    list-style-type:none;
-    width:12%;
-    height:30px;
-    line-height:30px;
-    vertical-align:middle;
-    text-align:center;
-    color:#000;
-    font-size: 15px;
-    background-color: transparent;
-}
-div#calendar ul.dates {
-    float:left;
-    margin: 0px;
-    padding: 0px;
-    margin-left: 5px;
-    margin-bottom: 5px;
-    width: 100%;
-}
-div#calendar ul.dates li {
-    margin:0px;
-    padding:0px;
-    margin-right:2%;
-    margin-top: 5px;
-    line-height:30px;
-    vertical-align:middle;
-    float:left;
-    list-style-type:none;
-    width:12%;
-    height:30px;
-    font-size:15px;
-    background-color: $calendarColor;
-    color:$calendarText;
-    text-align:center;
-
-&.obsadene {
-     background: red;
-     color: #fff;
- }
 }
 
-:focus {
-    outline:none;
+.ui-datepicker-current-day {
+    background: $mainColor !important;
+a {
+    color: #fff;
 }
-div.clear {
-    clear:both;
+}
+
+
+/* New styles for date range*/
+
+td.ui-state-selected-range a {
+    background: none !important;
+    border: none !important;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+td a {
+    text-align: center !important;
+}
+
+.ui-red-start {
+    background: #F29676 !important;
+    border-radius: 50% 0 0 50%;
+}
+
+.ui-red-end {
+    background: #F29676;
+    border-radius: 0 50% 50% 0;
+}
+
+.ui-red-start .ui-state-default,
+.ui-red-end .ui-state-default {
+    border: none !important;
+;
+    background: none !important;
+;
+    font-weight: normal;
+    color: #454545 !important;
+;
+}
+
+.ui-state-selected-range {
+    border: none !important;
+    font-weight: normal;
+    background: #f8c3b1 !important;
 }

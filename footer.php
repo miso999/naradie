@@ -122,13 +122,6 @@ foreach ($dates as $d) {
 
 <script>
     $(function () {
-
-        <?php
-
-        $booked = json_encode($booked);
-        echo "var array = ". $booked . ";\n";
-        ?>
-
         var options = $.extend(
             {},                                  // empty object
             $.datepicker.regional["sk"],         // fr regional
@@ -136,32 +129,132 @@ foreach ($dates as $d) {
         );
         var dateToday = new Date();
         $.datepicker.setDefaults(options);
-
-
-        $('#start_date').change(function(){
-            $('.start_date').datepicker('setDate', $(this).val());
-        });
-
-
-        $('.start_date').datepicker({
-            beforeShowDay: function(date) {
-                if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), array) != -1) {
-                    return [false, 'reserved'];
-                } else {
-                    return [true, ''];
-                }
-            },
-            minDate: dateToday,
-            altField: '#start_date'
-        });
-
     });
+
+
+    //start
+    $(document).ready(function() {
+        <?php
+        $booked = json_encode($booked);
+        echo "var array = ". $booked . ";\n";
+        ?>
+
+        function convertDate(date) {
+            var temp = date.split(".");
+            return new Date(temp[2] + "-" + temp[1] + "-" + temp[0]);
+        }
+        function validateDateRange() {
+
+            var txtStartDate = $("#start-date");
+            var txtEndDate = $("#end-date");
+            var startDate;
+            var endDate;
+            var tempDate;
+
+            if (txtStartDate.val() == "")
+                return false;
+
+            if (txtEndDate.val() == "")
+                return false;
+
+            startDate = convertDate(txtStartDate.val());
+            endDate = convertDate(txtEndDate.val());
+
+
+            for (i = 0; i < array.length; i++) {
+                var temp = array[i].split("-");
+
+                tempDate = new Date(temp[0] + "-" + temp[1] + "-" + temp[2]);
+
+                if (startDate < tempDate && endDate > tempDate) {
+                    $('<input>').attr({
+                        type: 'hidden',
+                        id: 'range_control',
+                        name: 'range_control',
+                        value: '3'
+                    }).appendTo('form');
+
+                    return false;
+
+                }
+            }
+        }
+
+
+        // jquery datepicker settings
+        $(function() {
+            $("#datepicker").datepicker({
+
+                showButtonPanel: false,
+                minDate: 0,
+                beforeShowDay: function(date) {
+
+                    var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#start-date').val());
+                    var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#end-date').val());
+
+                    if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), array) != -1) {
+                        return [false, 'reserved'];
+                    }
+
+                    else if (date1 && date && (date1.getTime() == date.getTime())) {
+                        return [true, 'ui-red-start', ''];
+                    }
+
+                    else if (date2 && date && (date2.getTime() == date.getTime())) {
+                        return [true, 'ui-red-end', ''];
+                    }
+
+                    else if (date >= date1 && date <= date2) {
+                        return [true, 'ui-state-selected-range', ''];
+                    }
+
+
+
+                    var d = date.getTime();
+
+                    return [true, '', ''];
+                },
+                onSelect: function(dateText, inst) {
+
+                    var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#start-date').val());
+                    var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#end-date').val());
+                    if (!date1 || date2) {
+                        $('#start-date').val(dateText);
+                        $('.start-date-visible').text(dateText);
+                        $('#end-date').val('');
+                        $('.end-date-visible').text('');
+                        $(this).datepicker('option', dateText);
+                    } else {
+                        if (new Date(dateText) < date1) {
+                            var sDate = $('#start-date').val();
+                            $('.start-date-visible').text(dateText);
+                            $('#start-date').val(dateText);
+                            $(this).datepicker('option', null);
+
+                            $('.end-date-visible').text(sDate);
+                            $('#end-date').val(sDate);
+
+                        } else {
+                            $('.end-date-visible').text(dateText);
+                            $('#end-date').val(dateText);
+                           var td =  $("td");
+                           console.log(td)
+                            return validateDateRange();
+                            $(this).datepicker('option', null);
+                        }
+                    }
+                }
+            });
+        });
+    });
+    //end
 </script>
 
 
 <div class="modal modal--show" id="get-in-touch">
     <div class="modal__inner">
         <div class="wrapper ">
+
             <h2 class="section-title">Rezervujte si termín</strong>
             </h2>
             <hr>
@@ -170,20 +263,39 @@ foreach ($dates as $d) {
                 vašou požiadavkou </h2>
 
             <div class="form">
-                <form action="" method="post" name="registration" class="register">
+                <form action="" method="post" id="booking" class="register">
 
                     <div class="row row--gutters">
                         <div class="row__medium-6">
-                            <div class="start_date"> </div>
-                            <input id="start_date" class="datepicker" placeholder="Posledný deň rezervácie"/>
+                            <div id="datepicker"></div>
                         </div>
-                        <div class="row__medium-6">
-                            <div class="datepicker"> </div>
+                        <div class="row__medium-6 user-details">
+                            <input type="text" name="meno" placeholder="Meno a priezvisko">
+                            <input type="text" name="meno" placeholder="E-mail">
+
+                            <textarea name="note" id="" cols="10"   rows="5" placeholder="Poznámka"></textarea>
+                            <div class="row">
+                                <div class="row__medium-5">
+
+                                    <span><input type="text" id="start-date" name="start-date" placeholder="Prvý deň rezervácie"></span>
+                                </div>
+                                <div class="row__medium-2" style="text-align: center;font-weight: 30px;font-size: 25px;">
+                                    -
+                                </div>
+                                <div class="row__medium-5">
+
+                                    <span><input type="text" id="end-date" name="end-date" placeholder="Posledný deň rezervácie"></span>
+                                </div>
+                            </div>
+
+
+
+                            <input type="submit" value="Odoslať">
                         </div>
 
                     </div>
 
-                    <input type="submit" value="Odoslat">
+
                 </form>
             </div>
 

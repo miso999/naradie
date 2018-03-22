@@ -42,3 +42,9 @@
   width:100%;
   position:absolute;
 }
+
+.label-middle {
+    display: table-cell;
+    vertical-align: middle;
+    height: 50px;
+}

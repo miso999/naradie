@@ -11,4 +11,3 @@ new RevealOnScroll($('.service'), '70%');
 var stickyHeader = new StickyHeader();
 new TabSwitcher();
 new Modal();
-
