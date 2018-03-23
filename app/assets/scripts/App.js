@@ -8,3 +8,4 @@ import Calendar from "./modules/Calendar";
 var mobileMenu = new MobileMenu();
 new StickyHeader();
 new Modal();
+new Calendar();

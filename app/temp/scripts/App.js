@@ -9920,6 +9920,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var mobileMenu = new _MobileMenu2.default();
 new _StickyHeader2.default();
 new _Modal2.default();
+new _Calendar2.default();
 
 /***/ }),
 /* 2 */
@@ -11339,23 +11340,112 @@ exports.default = Modal;
 "use strict";
 
 
-$('#booking').submit(function () {
-    var errors = [];
-    if ($("#range_control").length) {
-        errors.push('V zadanom rozsahu je produkt už rezervovaný.');
-    }if (!$('#start-date').val() || !$('#end-date').val()) {
-        errors.push('Vyberte prosím v kalendári prvý a posledný deň rezervácie.');
-    }if (!$("input[name='meno']").val()) {
-        errors.push('Zadajte prosím meno a priezvisko.');
-    }if (!$("input[name='email']").val()) {
-        errors.push('Zadajte prosím emailovú adresu.');
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Calendar = function () {
+    function Calendar() {
+        _classCallCheck(this, Calendar);
+
+        this.bookingForm = $('#booking');
+        this.events();
     }
 
-    if (errors.length) {
-        $("#booking-form-errors").html(errors.join('<br>'));
-        return false;
-    }
-});
+    _createClass(Calendar, [{
+        key: 'events',
+        value: function events() {
+            this.bookingForm.submit(this.validateForm);
+            this.initMainCalendar();
+            this.initBookingCalendar();
+        }
+    }, {
+        key: 'validateForm',
+        value: function validateForm() {
+            var errors = [];
+            if ($("#range_control").length) {
+                errors.push('V zadanom rozsahu je produkt už rezervovaný.');
+            }if (!$('#start-date').val() || !$('#end-date').val()) {
+                errors.push('Vyberte prosím v kalendári prvý a posledný deň rezervácie.');
+            }if (!$("input[name='meno']").val()) {
+                errors.push('Zadajte prosím meno a priezvisko.');
+            }if (!$("input[name='email']").val()) {
+                errors.push('Zadajte prosím emailovú adresu.');
+            }
+
+            if (errors.length) {
+                $("#booking-form-errors").html(errors.join('<br>'));
+                return false;
+            }
+        }
+    }, {
+        key: 'initMainCalendar',
+        value: function initMainCalendar() {
+            $("#dostupnost").datepicker({
+                showButtonPanel: false,
+                minDate: 0,
+                beforeShowDay: function beforeShowDay(date) {
+                    if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), unavailableDates) != -1) {
+                        return [false, 'reserved'];
+                    }
+                    return [true, '', ''];
+                }
+            });
+        }
+    }, {
+        key: 'initBookingCalendar',
+        value: function initBookingCalendar() {
+            $("#datepicker").datepicker({
+                minDate: 0,
+                beforeShowDay: function beforeShowDay(date) {
+                    var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#start-date').val());
+                    var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#end-date').val());
+
+                    if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), unavailableDates) != -1) {
+                        return [false, 'reserved'];
+                    } else if (date1 && date && date1.getTime() == date.getTime()) {
+                        return [true, 'ui-red-start', ''];
+                    } else if (date2 && date && date2.getTime() == date.getTime()) {
+                        return [true, 'ui-red-end', ''];
+                    } else if (date >= date1 && date <= date2) {
+                        return [true, 'ui-state-selected-range', ''];
+                    }
+
+                    return [true, '', ''];
+                },
+                onSelect: function onSelect(dateText, inst) {
+                    var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#start-date').val());
+                    var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#end-date').val());
+                    if (!date1 || date2) {
+                        $('#start-date').val(dateText);
+                        $('#end-date').val('');
+                        $(this).datepicker('option', dateText);
+                    } else {
+                        if (convertDate(dateText) < date1) {
+                            var sDate = $('#start-date').val();
+                            $('#start-date').val(dateText);
+                            $('#end-date').val(sDate);
+                            $(this).datepicker('option', null);
+                        } else {
+                            $('#end-date').val(dateText);
+                            return validateDateRange();
+                            $(this).datepicker('option', null);
+                        }
+                    }
+                }
+            });
+        }
+    }]);
+
+    return Calendar;
+}();
+
+exports.default = Calendar;
+
 
 function convertDate(date) {
     var temp = date.split(".");
@@ -11401,56 +11491,6 @@ $.datepicker.regional["sk"], // fr regional
 { dateFormat: "dd.mm.yy" /*, ... */ // your custom options
 });
 $.datepicker.setDefaults(options);
-
-$("#datepicker").datepicker({
-    beforeShowDay: function beforeShowDay(date) {
-        var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#start-date').val());
-        var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#end-date').val());
-
-        if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), unavailableDates) != -1) {
-            return [false, 'reserved'];
-        } else if (date1 && date && date1.getTime() == date.getTime()) {
-            return [true, 'ui-red-start', ''];
-        } else if (date2 && date && date2.getTime() == date.getTime()) {
-            return [true, 'ui-red-end', ''];
-        } else if (date >= date1 && date <= date2) {
-            return [true, 'ui-state-selected-range', ''];
-        }
-
-        return [true, '', ''];
-    },
-    onSelect: function onSelect(dateText, inst) {
-        var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#start-date').val());
-        var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#end-date').val());
-        if (!date1 || date2) {
-            $('#start-date').val(dateText);
-            $('#end-date').val('');
-            $(this).datepicker('option', dateText);
-        } else {
-            if (convertDate(dateText) < date1) {
-                var sDate = $('#start-date').val();
-                $('#start-date').val(dateText);
-                $('#end-date').val(sDate);
-                $(this).datepicker('option', null);
-            } else {
-                $('#end-date').val(dateText);
-                return validateDateRange();
-                $(this).datepicker('option', null);
-            }
-        }
-    }
-});
-
-$("#dostupnost").datepicker({
-    showButtonPanel: false,
-    minDate: 0,
-    beforeShowDay: function beforeShowDay(date) {
-        if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), unavailableDates) != -1) {
-            return [false, 'reserved'];
-        }
-        return [true, '', ''];
-    }
-});
 
 /***/ })
 /******/ ]);

@@ -1,11 +1,23 @@
-    $('#booking').submit(function(){
+class Calendar {
+
+    constructor() {
+        this.bookingForm = $('#booking');
+        this.events();
+    }
+
+    events() {
+        this.bookingForm.submit(this.validateForm);
+        this.initMainCalendar();
+        this.initBookingCalendar();
+    }
+
+
+    validateForm() {
         var errors = [];
         if($("#range_control").length) {
             errors.push('V zadanom rozsahu je produkt už rezervovaný.');
-
         } if(!$('#start-date').val() || !$('#end-date').val()) {
             errors.push('Vyberte prosím v kalendári prvý a posledný deň rezervácie.');
-
         } if(!$("input[name='meno']" ).val()) {
             errors.push('Zadajte prosím meno a priezvisko.');
         } if(!$("input[name='email']" ).val()) {
@@ -16,7 +28,79 @@
             $("#booking-form-errors").html(errors.join('<br>'));
             return false;
         }
-    })
+    }
+
+    initMainCalendar() {
+        $("#dostupnost").datepicker({
+            showButtonPanel: false,
+            minDate: 0,
+            beforeShowDay: function(date) {
+                if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), unavailableDates) != -1) {
+                    return [false, 'reserved'];
+                }
+                return [true, '', ''];
+            },
+        });
+    }
+
+
+    initBookingCalendar() {
+        $("#datepicker").datepicker({
+            minDate: 0,
+            beforeShowDay: function(date) {
+                var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#start-date').val());
+                var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#end-date').val());
+
+                if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), unavailableDates) != -1) {
+                    return [false, 'reserved'];
+                }
+
+                else if (date1 && date && (date1.getTime() == date.getTime())) {
+                    return [true, 'ui-red-start', ''];
+                }
+
+                else if (date2 && date && (date2.getTime() == date.getTime())) {
+                    return [true, 'ui-red-end', ''];
+                }
+
+                else if (date >= date1 && date <= date2) {
+                    return [true, 'ui-state-selected-range', ''];
+                }
+
+                return [true, '', ''];
+            },
+            onSelect: function(dateText, inst) {
+                var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#start-date').val());
+                var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#end-date').val());
+                if (!date1 || date2) {
+                    $('#start-date').val(dateText);
+                    $('#end-date').val('');
+                    $(this).datepicker('option', dateText);
+                } else {
+                    if (convertDate(dateText) < date1) {
+                        var sDate = $('#start-date').val();
+                        $('#start-date').val(dateText);
+                        $('#end-date').val(sDate);
+                        $(this).datepicker('option', null);
+                    } else {
+                        $('#end-date').val(dateText);
+                        return validateDateRange();
+                        $(this).datepicker('option', null);
+                    }
+                }
+            }
+        });
+    }
+
+
+
+
+}
+
+export default Calendar;
+
+
+
 
     function convertDate(date) {
         var temp = date.split(".");
@@ -67,58 +151,4 @@
         $.datepicker.setDefaults(options);
 
 
-        $("#datepicker").datepicker({
-            beforeShowDay: function(date) {
-                var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#start-date').val());
-                var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#end-date').val());
 
-                if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), unavailableDates) != -1) {
-                    return [false, 'reserved'];
-                }
-
-                else if (date1 && date && (date1.getTime() == date.getTime())) {
-                    return [true, 'ui-red-start', ''];
-                }
-
-                else if (date2 && date && (date2.getTime() == date.getTime())) {
-                    return [true, 'ui-red-end', ''];
-                }
-
-                else if (date >= date1 && date <= date2) {
-                    return [true, 'ui-state-selected-range', ''];
-                }
-
-                return [true, '', ''];
-            },
-            onSelect: function(dateText, inst) {
-                var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#start-date').val());
-                var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#end-date').val());
-                if (!date1 || date2) {
-                    $('#start-date').val(dateText);
-                    $('#end-date').val('');
-                    $(this).datepicker('option', dateText);
-                } else {
-                    if (convertDate(dateText) < date1) {
-                        var sDate = $('#start-date').val();
-                        $('#start-date').val(dateText);
-                        $('#end-date').val(sDate);
-                        $(this).datepicker('option', null);
-                    } else {
-                        $('#end-date').val(dateText);
-                        return validateDateRange();
-                        $(this).datepicker('option', null);
-                    }
-                }
-            }
-        });
-
-        $("#dostupnost").datepicker({
-            showButtonPanel: false,
-            minDate: 0,
-            beforeShowDay: function(date) {
-                if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), unavailableDates) != -1) {
-                    return [false, 'reserved'];
-                }
-                return [true, '', ''];
-            },
-        });
