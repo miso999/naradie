@@ -4,7 +4,7 @@
     height: 30px;
     text-align: center;
     cursor: pointer;
-    background-image: url('http://localhost:3000/wp-content/themes/naradie/images/arrow.png');
+    background-image: url('/wp-content/themes/naradie/images/arrow.png');
     background-repeat: no-repeat;
     line-height: 600%;
     overflow: hidden;
@@ -23,9 +23,7 @@
 .ui-state-default {
     color: #333;
     text-decoration: none;
-
 }
-
 
 .ui-datepicker-title {
     background: $calendarColor;
@@ -38,13 +36,11 @@
     margin:0px auto;
     padding:0px;
     width: 100%;
-    font-family:Helvetica, "Times New Roman", Times, serif;
 }
 
 .ui-datepicker-calendar td {
     background: $calendarColor;
     text-align: center;
-
     margin-top: 0.3125rem;
     line-height: 1.875rem;
     vertical-align: middle;
@@ -52,7 +48,6 @@
 }
 
 .ui-datepicker-calendar th {
-
     text-align: center;
     font-weight: 100;
 }
@@ -64,12 +59,10 @@
 .ui-datepicker-prev.ui-state-disabled {
     display: none;
 }
-
 .ui-state-disabled {
     opacity:.3;
     cursor: default;
 }
-
 .ui-datepicker-calendar .reserved {
     background: red;
     opacity:1;
@@ -80,12 +73,31 @@ span {
 }
 
 .ui-datepicker-current-day {
-    background: $mainColor !important;
+    background: $mainColor;
 a {
     color: #fff;
 }
 }
 
+#dostupnost .ui-datepicker-current-day {
+    background: $calendarColor;
+    a {
+        color: #333;
+    }
+}
+
+#dostupnost .ui-datepicker-current-day.ui-datepicker-today {
+    a {
+        color: #fff;
+    }
+}
+
+.ui-datepicker-today {
+    background: $mainColor !important;
+    a {
+        color: #fff;
+    }
+}
 
 /* New styles for date range*/
 
@@ -100,33 +112,39 @@ td {
     cursor: pointer;
 }
 
+#dostupnost td, #dostupnost td a {
+    cursor: default !important;
+}
+
 td a {
     text-align: center !important;
 }
 
 .ui-red-start {
-    background: #F29676 !important;
-    border-radius: 50% 0 0 50%;
+    background: $calendarStartDay !important;
+    border-radius: 25% 0 0 25%;
 }
 
 .ui-red-end {
-    background: #F29676;
-    border-radius: 0 50% 50% 0;
+    background: $calendarEndDay !important;
+    border-radius: 0 25% 25% 0;
 }
 
 .ui-red-start .ui-state-default,
 .ui-red-end .ui-state-default {
     border: none !important;
-;
     background: none !important;
-;
     font-weight: normal;
-    color: #454545 !important;
-;
+    color: #fff !important;
 }
 
 .ui-state-selected-range {
     border: none !important;
     font-weight: normal;
-    background: #f8c3b1 !important;
+    background: $calendarSelectedRange !important;
+    color: #fff !important;
+
+    a {
+        color: #fff !important;
+    }
 }

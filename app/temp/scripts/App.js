@@ -9907,21 +9907,18 @@ var _StickyHeader = __webpack_require__(5);
 
 var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
 
-var _TabSwticher = __webpack_require__(7);
-
-var _TabSwticher2 = _interopRequireDefault(_TabSwticher);
-
-var _Modal = __webpack_require__(8);
+var _Modal = __webpack_require__(7);
 
 var _Modal2 = _interopRequireDefault(_Modal);
+
+var _Calendar = __webpack_require__(8);
+
+var _Calendar2 = _interopRequireDefault(_Calendar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
-new _RevealOnScroll2.default((0, _jquery2.default)('.feature-item'), '80%');
-new _RevealOnScroll2.default((0, _jquery2.default)('.service'), '70%');
-var stickyHeader = new _StickyHeader2.default();
-new _TabSwticher2.default();
+new _StickyHeader2.default();
 new _Modal2.default();
 
 /***/ }),
@@ -11287,64 +11284,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var TabSwitcher = function () {
-    function TabSwitcher() {
-        _classCallCheck(this, TabSwitcher);
-
-        this.links = (0, _jquery2.default)('.tabswitcher__menu li a');
-        this.tabs = (0, _jquery2.default)('.tabswitcher__tab');
-        this.activeTabClass = 'tabswitcher__tab--active';
-        this.activeLinkClass = 'active';
-        this.linkDataAttribute = 'data-tab-name';
-        this.events();
-    }
-
-    _createClass(TabSwitcher, [{
-        key: 'events',
-        value: function events() {
-            var _this = this;
-
-            (0, _jquery2.default)(this.links).on("click", function (e) {
-                _this.switchTab((0, _jquery2.default)(e.target));
-            });
-        }
-    }, {
-        key: 'switchTab',
-        value: function switchTab(e) {
-            var id = (0, _jquery2.default)(e).attr(this.linkDataAttribute);
-            this.links.removeClass(this.activeLinkClass);
-            (0, _jquery2.default)(e).addClass(this.activeLinkClass);
-            this.tabs.removeClass(this.activeTabClass);
-            (0, _jquery2.default)('#' + id).addClass(this.activeTabClass);
-        }
-    }]);
-
-    return TabSwitcher;
-}();
-
-exports.default = TabSwitcher;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 var Modal = function () {
     function Modal() {
         _classCallCheck(this, Modal);
@@ -11392,6 +11331,126 @@ var Modal = function () {
 }();
 
 exports.default = Modal;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+$('#booking').submit(function () {
+    var errors = [];
+    if ($("#range_control").length) {
+        errors.push('V zadanom rozsahu je produkt už rezervovaný.');
+    }if (!$('#start-date').val() || !$('#end-date').val()) {
+        errors.push('Vyberte prosím v kalendári prvý a posledný deň rezervácie.');
+    }if (!$("input[name='meno']").val()) {
+        errors.push('Zadajte prosím meno a priezvisko.');
+    }if (!$("input[name='email']").val()) {
+        errors.push('Zadajte prosím emailovú adresu.');
+    }
+
+    if (errors.length) {
+        $("#booking-form-errors").html(errors.join('<br>'));
+        return false;
+    }
+});
+
+function convertDate(date) {
+    var temp = date.split(".");
+    return new Date(temp[2] + "-" + temp[1] + "-" + temp[0]);
+}
+function validateDateRange() {
+
+    var txtStartDate = $("#start-date");
+    var txtEndDate = $("#end-date");
+    var startDate;
+    var endDate;
+    var tempDate;
+
+    if (txtStartDate.val() == "") return false;
+
+    if (txtEndDate.val() == "") return false;
+
+    startDate = convertDate(txtStartDate.val());
+    endDate = convertDate(txtEndDate.val());
+
+    var i;
+    for (i = 0; i < unavailableDates.length; i++) {
+        var temp = unavailableDates[i].split("-");
+        tempDate = new Date(temp[0] + "-" + temp[1] + "-" + temp[2]);
+
+        // if startdate < booked date and end date > booked date return hidden input
+        if (startDate < tempDate && endDate > tempDate) {
+            $('<input>').attr({
+                type: 'hidden',
+                id: 'range_control',
+                name: 'range_control',
+                value: '3'
+            }).appendTo('form');
+            return false;
+        } else {
+            // if select next available dates, remove hidden input
+            if ($('#range_control').length) $('#range_control').remove();
+        }
+    }
+}
+var options = $.extend({}, // empty object
+$.datepicker.regional["sk"], // fr regional
+{ dateFormat: "dd.mm.yy" /*, ... */ // your custom options
+});
+$.datepicker.setDefaults(options);
+
+$("#datepicker").datepicker({
+    beforeShowDay: function beforeShowDay(date) {
+        var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#start-date').val());
+        var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#end-date').val());
+
+        if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), unavailableDates) != -1) {
+            return [false, 'reserved'];
+        } else if (date1 && date && date1.getTime() == date.getTime()) {
+            return [true, 'ui-red-start', ''];
+        } else if (date2 && date && date2.getTime() == date.getTime()) {
+            return [true, 'ui-red-end', ''];
+        } else if (date >= date1 && date <= date2) {
+            return [true, 'ui-state-selected-range', ''];
+        }
+
+        return [true, '', ''];
+    },
+    onSelect: function onSelect(dateText, inst) {
+        var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#start-date').val());
+        var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#end-date').val());
+        if (!date1 || date2) {
+            $('#start-date').val(dateText);
+            $('#end-date').val('');
+            $(this).datepicker('option', dateText);
+        } else {
+            if (convertDate(dateText) < date1) {
+                var sDate = $('#start-date').val();
+                $('#start-date').val(dateText);
+                $('#end-date').val(sDate);
+                $(this).datepicker('option', null);
+            } else {
+                $('#end-date').val(dateText);
+                return validateDateRange();
+                $(this).datepicker('option', null);
+            }
+        }
+    }
+});
+
+$("#dostupnost").datepicker({
+    showButtonPanel: false,
+    minDate: 0,
+    beforeShowDay: function beforeShowDay(date) {
+        if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), unavailableDates) != -1) {
+            return [false, 'reserved'];
+        }
+        return [true, '', ''];
+    }
+});
 
 /***/ })
 /******/ ]);

@@ -1,29 +1,32 @@
 .user-details {
 
-input {
+  &__errors {
+    color: red;
+  }
+
+  input {
     margin: 5px 0;
     width: 100%;
-}
+  }
 
-label {
-
+  label {
     float: left;
-
-    display:inline-block;
-    vertical-align:middle;
+    display: inline-block;
+    vertical-align: middle;
 
     span {
-        display:inline-block;
-        vertical-align:middle;
+      display: inline-block;
+      vertical-align: middle;
     }
-}
-span {
+  }
+  span {
     display: block;
     overflow: hidden;
 
-}
+  }
 
-.start-date-visible, end-date-visible {
+  .start-date-visible, end-date-visible {
     display: inline;
-}
+  }
+
 }
