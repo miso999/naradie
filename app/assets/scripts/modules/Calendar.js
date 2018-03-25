@@ -2,29 +2,40 @@ class Calendar {
 
     constructor() {
         this.bookingForm = $('#booking');
+        this.localize();
+        this.initMainCalendar();
+        this.initBookingCalendar();
         this.events();
     }
 
     events() {
         this.bookingForm.submit(this.validateForm);
-        this.initMainCalendar();
-        this.initBookingCalendar();
     }
 
+    localize() {
+        var options = $.extend(
+            $.datepicker.regional["sk"],
+            {dateFormat: "dd.mm.yy"}
+        );
+        $.datepicker.setDefaults(options);
+    }
 
     validateForm() {
         var errors = [];
-        if($("#range_control").length) {
+        if ($("#range_control").length) {
             errors.push('V zadanom rozsahu je produkt už rezervovaný.');
-        } if(!$('#start-date').val() || !$('#end-date').val()) {
+        }
+        if (!$('#start-date').val() || !$('#end-date').val()) {
             errors.push('Vyberte prosím v kalendári prvý a posledný deň rezervácie.');
-        } if(!$("input[name='meno']" ).val()) {
+        }
+        if (!$("input[name='name']").val()) {
             errors.push('Zadajte prosím meno a priezvisko.');
-        } if(!$("input[name='email']" ).val()) {
+        }
+        if (!$("input[name='email']").val()) {
             errors.push('Zadajte prosím emailovú adresu.');
         }
 
-        if(errors.length) {
+        if (errors.length) {
             $("#booking-form-errors").html(errors.join('<br>'));
             return false;
         }
@@ -34,7 +45,7 @@ class Calendar {
         $("#dostupnost").datepicker({
             showButtonPanel: false,
             minDate: 0,
-            beforeShowDay: function(date) {
+            beforeShowDay: function (date) {
                 if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), unavailableDates) != -1) {
                     return [false, 'reserved'];
                 }
@@ -43,11 +54,10 @@ class Calendar {
         });
     }
 
-
     initBookingCalendar() {
         $("#datepicker").datepicker({
             minDate: 0,
-            beforeShowDay: function(date) {
+            beforeShowDay: function (date) {
                 var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#start-date').val());
                 var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#end-date').val());
 
@@ -69,7 +79,7 @@ class Calendar {
 
                 return [true, '', ''];
             },
-            onSelect: function(dateText, inst) {
+            onSelect: function (dateText, inst) {
                 var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#start-date').val());
                 var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $('#end-date').val());
                 if (!date1 || date2) {
@@ -77,14 +87,14 @@ class Calendar {
                     $('#end-date').val('');
                     $(this).datepicker('option', dateText);
                 } else {
-                    if (convertDate(dateText) < date1) {
+                    if (Calendar.convertDate(dateText) < date1) {
                         var sDate = $('#start-date').val();
                         $('#start-date').val(dateText);
                         $('#end-date').val(sDate);
                         $(this).datepicker('option', null);
                     } else {
                         $('#end-date').val(dateText);
-                        return validateDateRange();
+                        return Calendar.validateDateRange();
                         $(this).datepicker('option', null);
                     }
                 }
@@ -92,21 +102,12 @@ class Calendar {
         });
     }
 
-
-
-
-}
-
-export default Calendar;
-
-
-
-
-    function convertDate(date) {
+    static convertDate(date) {
         var temp = date.split(".");
         return new Date(temp[2] + "-" + temp[1] + "-" + temp[0]);
     }
-    function validateDateRange() {
+
+    static validateDateRange() {
 
         var txtStartDate = $("#start-date");
         var txtEndDate = $("#end-date");
@@ -120,8 +121,8 @@ export default Calendar;
         if (txtEndDate.val() == "")
             return false;
 
-        startDate = convertDate(txtStartDate.val());
-        endDate = convertDate(txtEndDate.val());
+        startDate = Calendar.convertDate(txtStartDate.val());
+        endDate = Calendar.convertDate(txtEndDate.val());
 
         var i;
         for (i = 0; i < unavailableDates.length; i++) {
@@ -139,16 +140,20 @@ export default Calendar;
                 return false;
             } else {
                 // if select next available dates, remove hidden input
-                if($('#range_control').length)  $('#range_control').remove();
+                if ($('#range_control').length) $('#range_control').remove();
             }
         }
     }
-        var options = $.extend(
-            {},                                  // empty object
-            $.datepicker.regional["sk"],         // fr regional
-            { dateFormat: "dd.mm.yy" /*, ... */ } // your custom options
-        );
-        $.datepicker.setDefaults(options);
+
+}
+
+export default Calendar;
+
+
+
+
+
+
 
 
 

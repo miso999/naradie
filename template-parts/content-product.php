@@ -13,11 +13,14 @@ if ($_POST['start-date'] && $_POST['end-date'] && !$_POST['range_control']) {
     $start_date = date('Y-m-d', strtotime($_POST['start-date']));
     $end_date = date('Y-m-d', strtotime($_POST['end-date']));
 
-
     $wpdb->insert('wp_calendar', array(
         'start_date' => $start_date,
         'end_date' => $end_date,
-        'product_id' => '17'
+        'name' => $_POST['name'],
+        'email' => $_POST['email'],
+        'phone' => $_POST['phone'],
+        'note' => $_POST['note'],
+        'product_id' => get_the_ID()
     ));
 }
 ?>
@@ -30,6 +33,10 @@ if ($_POST['start-date'] && $_POST['end-date'] && !$_POST['range_control']) {
         <div class="row__medium-4">
             <h3>Dostupnosť</h3>
             <div id="dostupnost"></div>
+            <div class="vysvetlivky">
+                <span class="note note--free">Voľné</span>
+                <span class="note note--booked">Obsadené</span>
+            </div>
 
         </div>
 

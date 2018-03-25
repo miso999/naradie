@@ -11353,27 +11353,37 @@ var Calendar = function () {
         _classCallCheck(this, Calendar);
 
         this.bookingForm = $('#booking');
+        this.localize();
+        this.initMainCalendar();
+        this.initBookingCalendar();
         this.events();
     }
 
     _createClass(Calendar, [{
-        key: 'events',
+        key: "events",
         value: function events() {
             this.bookingForm.submit(this.validateForm);
-            this.initMainCalendar();
-            this.initBookingCalendar();
         }
     }, {
-        key: 'validateForm',
+        key: "localize",
+        value: function localize() {
+            var options = $.extend($.datepicker.regional["sk"], { dateFormat: "dd.mm.yy" });
+            $.datepicker.setDefaults(options);
+        }
+    }, {
+        key: "validateForm",
         value: function validateForm() {
             var errors = [];
             if ($("#range_control").length) {
                 errors.push('V zadanom rozsahu je produkt už rezervovaný.');
-            }if (!$('#start-date').val() || !$('#end-date').val()) {
+            }
+            if (!$('#start-date').val() || !$('#end-date').val()) {
                 errors.push('Vyberte prosím v kalendári prvý a posledný deň rezervácie.');
-            }if (!$("input[name='meno']").val()) {
+            }
+            if (!$("input[name='name']").val()) {
                 errors.push('Zadajte prosím meno a priezvisko.');
-            }if (!$("input[name='email']").val()) {
+            }
+            if (!$("input[name='email']").val()) {
                 errors.push('Zadajte prosím emailovú adresu.');
             }
 
@@ -11383,7 +11393,7 @@ var Calendar = function () {
             }
         }
     }, {
-        key: 'initMainCalendar',
+        key: "initMainCalendar",
         value: function initMainCalendar() {
             $("#dostupnost").datepicker({
                 showButtonPanel: false,
@@ -11397,7 +11407,7 @@ var Calendar = function () {
             });
         }
     }, {
-        key: 'initBookingCalendar',
+        key: "initBookingCalendar",
         value: function initBookingCalendar() {
             $("#datepicker").datepicker({
                 minDate: 0,
@@ -11425,19 +11435,62 @@ var Calendar = function () {
                         $('#end-date').val('');
                         $(this).datepicker('option', dateText);
                     } else {
-                        if (convertDate(dateText) < date1) {
+                        if (Calendar.convertDate(dateText) < date1) {
                             var sDate = $('#start-date').val();
                             $('#start-date').val(dateText);
                             $('#end-date').val(sDate);
                             $(this).datepicker('option', null);
                         } else {
                             $('#end-date').val(dateText);
-                            return validateDateRange();
+                            return Calendar.validateDateRange();
                             $(this).datepicker('option', null);
                         }
                     }
                 }
             });
+        }
+    }], [{
+        key: "convertDate",
+        value: function convertDate(date) {
+            var temp = date.split(".");
+            return new Date(temp[2] + "-" + temp[1] + "-" + temp[0]);
+        }
+    }, {
+        key: "validateDateRange",
+        value: function validateDateRange() {
+
+            var txtStartDate = $("#start-date");
+            var txtEndDate = $("#end-date");
+            var startDate;
+            var endDate;
+            var tempDate;
+
+            if (txtStartDate.val() == "") return false;
+
+            if (txtEndDate.val() == "") return false;
+
+            startDate = Calendar.convertDate(txtStartDate.val());
+            endDate = Calendar.convertDate(txtEndDate.val());
+
+            var i;
+            for (i = 0; i < unavailableDates.length; i++) {
+                var temp = unavailableDates[i].split("-");
+                tempDate = new Date(temp[0] + "-" + temp[1] + "-" + temp[2]);
+
+                // if startdate < booked date and end date > booked date return hidden input
+                if (startDate < tempDate && endDate > tempDate) {
+                    $('<input>').attr({
+                        type: 'hidden',
+                        id: 'range_control',
+                        name: 'range_control',
+                        value: '3'
+                    }).appendTo('form');
+                    return false;
+                } else {
+                    // if select next available dates, remove hidden input
+                    if ($('#range_control').length) $('#range_control').remove();
+                }
+            }
         }
     }]);
 
@@ -11445,52 +11498,6 @@ var Calendar = function () {
 }();
 
 exports.default = Calendar;
-
-
-function convertDate(date) {
-    var temp = date.split(".");
-    return new Date(temp[2] + "-" + temp[1] + "-" + temp[0]);
-}
-function validateDateRange() {
-
-    var txtStartDate = $("#start-date");
-    var txtEndDate = $("#end-date");
-    var startDate;
-    var endDate;
-    var tempDate;
-
-    if (txtStartDate.val() == "") return false;
-
-    if (txtEndDate.val() == "") return false;
-
-    startDate = convertDate(txtStartDate.val());
-    endDate = convertDate(txtEndDate.val());
-
-    var i;
-    for (i = 0; i < unavailableDates.length; i++) {
-        var temp = unavailableDates[i].split("-");
-        tempDate = new Date(temp[0] + "-" + temp[1] + "-" + temp[2]);
-
-        // if startdate < booked date and end date > booked date return hidden input
-        if (startDate < tempDate && endDate > tempDate) {
-            $('<input>').attr({
-                type: 'hidden',
-                id: 'range_control',
-                name: 'range_control',
-                value: '3'
-            }).appendTo('form');
-            return false;
-        } else {
-            // if select next available dates, remove hidden input
-            if ($('#range_control').length) $('#range_control').remove();
-        }
-    }
-}
-var options = $.extend({}, // empty object
-$.datepicker.regional["sk"], // fr regional
-{ dateFormat: "dd.mm.yy" /*, ... */ // your custom options
-});
-$.datepicker.setDefaults(options);
 
 /***/ })
 /******/ ]);

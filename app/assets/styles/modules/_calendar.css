@@ -148,3 +148,31 @@ td a {
         color: #fff !important;
     }
 }
+
+.vysvetlivky {
+    border-top:1px solid #e6e6e6;
+    margin-top: 10px;
+    padding: 10px 0px;
+    font-size: 12px;
+
+    span {
+        margin-right: 5px;
+    }
+}
+
+.note::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+}
+
+.note--booked::before {
+    background: red;
+}
+
+.note--free::before {
+    background: #f6f6f6;;
+}
+

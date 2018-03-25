@@ -2235,6 +2235,33 @@ td a {
         color: #fff !important;
     }
 
+.vysvetlivky {
+    border-top:0.0625rem solid #e6e6e6;
+    margin-top: 0.625rem;
+    padding: 0.625rem 0rem;
+    font-size: 0.75rem;
+}
+
+.vysvetlivky span {
+        margin-right: 0.3125rem;
+    }
+
+.note::before {
+    content: "";
+    display: inline-block;
+    width: 0.625rem;
+    height: 0.625rem;
+    margin-right: 0.3125rem;
+}
+
+.note--booked::before {
+    background: red;
+}
+
+.note--free::before {
+    background: #f6f6f6;;
+}
+
 .user-details__errors {
     color: red;
   }
