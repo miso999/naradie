@@ -94,8 +94,8 @@ class Calendar {
                         $(this).datepicker('option', null);
                     } else {
                         $('#end-date').val(dateText);
-                        return Calendar.validateDateRange();
                         $(this).datepicker('option', null);
+                        return Calendar.validateDateRange();
                     }
                 }
             }

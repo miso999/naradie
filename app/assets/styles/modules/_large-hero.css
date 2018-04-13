@@ -40,7 +40,7 @@
     left: 0;
     width: 100%;
     text-align: center;
-    background: rgba($mainColor, .15);
+    background: rgba($mainColor, .55);
 
 
     @mixin atMedium {
@@ -94,12 +94,10 @@
       left: -10px;
       bottom: 0;
       background: #ffffff;
-      transform: rotate(3deg) translate(3px, 45px);
 
       &:last-child {
         left: auto;
         right: -10px;
-        transform: rotate(-3deg) translate(-3px, 45px);
       }
     }
   }

@@ -11,7 +11,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="headline  headline--b-margin-small" style="margin-top: 35px;">', '</h1>' ); ?>
+        <hr class="left">
 	</header><!-- .entry-header -->
 
 	<?php futbalove_travniky_post_thumbnail(); ?>

@@ -6,10 +6,24 @@ Template Name: Home Page
 get_header(); ?>
 
 
-    <div style="height:450px;background:url('<?php echo get_template_directory_uri(); ?>/images/lawn.jpg');background-size: cover;
-            background-position-y: 550px;">
-    </div>
 
+    <div class="large-hero">
+
+        <img src="<?php echo get_template_directory_uri(); ?>/images/lawn.jpg" alt="Servis futbalových trávnikov" class="large-hero__image">
+        <div class="large-hero__overlay"></div>
+
+
+        <div class="large-hero__text-content">
+            <div class="wrapper fadeInDown animated">
+                <h1 class="large-hero__title"> Požičovňa záhradnej techniky</h1>
+                <p class="large-hero__description fadeInRight animated">Nemáte po ruke to správne náradie? Požičajte si ho teraz!</p>
+
+            </div>
+        </div>
+
+
+
+    </div>
 
     <div id="our-beginning" class="page-section page-section--stripe" data-section-link="#our-beginning-link"
          style="position: relative;">
@@ -308,18 +322,18 @@ get_header(); ?>
 
             <div class="row row--gutters row--mobile-padding">
                 <div class="row__medium-3">
-                    <div class="fav-item">
-                        <div class="fav-item__picture">
-                            <img class="img-responsive"
-                                 src="https://pozicovnazahradnejtechniky.files.wordpress.com/2015/09/pila440e1.jpg?w=640">
-                        </div>
-                        <div class="fav-item__title">
-                            Motorová Píla Husqarna 440 E-Series
-                        </div>
-                        <div class="fav-item__price">
-                            20 &euro; / deň
-                        </div>
+
+                    <div class="fav-item__picture">
+                        <img class="img-responsive"
+                             src="https://pozicovnazahradnejtechniky.files.wordpress.com/2015/09/pila440e1.jpg?w=640">
                     </div>
+                    <div class="fav-item__title">
+                        Motorová Píla Husqarna 440 E-Series
+                        <span class="fav-item__price">
+                        20 &euro; / deň
+                    </span>
+                    </div>
+
 
                 </div>
                 <div class="row__medium-3">
@@ -329,10 +343,11 @@ get_header(); ?>
                     </div>
                     <div class="fav-item__title">
                         Snehová Fréza Toro CCR2450
-                    </div>
-                    <div class="fav-item__price">
+                        <span class="fav-item__price">
                         30 &euro; / deň
+                    </span>
                     </div>
+
                 </div>
                 <div class="row__medium-3">
                     <div class="fav-item__picture">
@@ -341,10 +356,11 @@ get_header(); ?>
                     </div>
                     <div class="fav-item__title">
                         Rotavátor MDT
-                    </div>
-                    <div class="fav-item__price">
+                        <span class="fav-item__price">
                         35 &euro; / deň
+                    </span>
                     </div>
+
                 </div>
                 <div class="row__medium-3">
                     <div class="fav-item__picture">
@@ -353,10 +369,11 @@ get_header(); ?>
                     </div>
                     <div class="fav-item__title">
                         Drvič konárov AXO
-                    </div>
-                    <div class="fav-item__price">
+                        <span class="fav-item__price">
                         80 &euro; / deň
+                    </span>
                     </div>
+
                 </div>
             </div>
 

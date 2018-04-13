@@ -64,10 +64,28 @@ button {
 }
 
 .site-content {
-  padding-top: 0px;
+  padding-top: 100px;
 
   @mixin atMedium {
     padding-top: 125px;
   }
 }
 
+
+table {
+ border-color: $mainColor !important;
+
+  td {
+    font-weight: normal;
+
+  }
+
+  th,td,tr {
+    border-color: $mainColor !important;
+  }
+}
+
+.btn-primary {
+  background-color: $mainColor !important;
+  border-color: $mainColor !important;
+}

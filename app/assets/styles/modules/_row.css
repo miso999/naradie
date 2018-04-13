@@ -30,6 +30,11 @@
     padding-right: 65px;
   }
 
+  &--gutters-tp > div {
+    padding-right: 65px;
+    padding-top: 20px;
+  }
+
   &--gutters-large > div {
     padding-right: 100px;
   }

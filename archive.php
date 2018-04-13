@@ -15,16 +15,23 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+
+
+<div class="wrapper">
+
+    <?php
+    the_archive_title( '<h2 class="headline headline--centered headline--b-margin-small" style="margin-top: 50px">', '</h2>' );
+    the_archive_description( '<div class="archive-description">', '</div>' );
+    ?>
+    <hr>
+
+            <div class="row row--gutters row--gutters-tp">
 
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
+
+
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -43,9 +50,10 @@ get_header(); ?>
 
 		endif; ?>
 
+        </div>
+</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

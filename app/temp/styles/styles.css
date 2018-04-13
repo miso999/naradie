@@ -551,7 +551,7 @@ button {
     left: 0;
     width: 100%;
     text-align: center;
-    background: rgba(6,82,15, .15);
+    background: rgba(6,82,15, .45);
   }
 
 @media (min-width: 50rem) {

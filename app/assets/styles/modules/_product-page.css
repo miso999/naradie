@@ -4,6 +4,7 @@
     float: left;
     width: 100%;
     border-radius: 50%;
+    padding:30px;
 
     @mixin atMedium {
       max-width: 400px;
@@ -23,6 +24,8 @@
   }
 
   &__text {
+    padding:30px 0 0 30px;
+    text-align: justify;
    font-size: 14px;
     letter-spacing: 0.05625rem;
   }

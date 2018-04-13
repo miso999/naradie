@@ -287,3 +287,8 @@ function query_post_type($query) {
         return $query;
     }
 }
+
+
+function menu_link($category) {
+    return '<a href="'.esc_url(get_category_link(get_cat_ID($category))).'" title="'.$category.'">'.$category.'</a>';
+}

@@ -10,11 +10,8 @@
 ?>
 
 <section class="no-results not-found">
-    <header class="page-header">
-        <h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'futbalove_travniky' ); ?></h1>
-    </header><!-- .page-header -->
 
-    <div class="page-content">
+    <div class="wrapper">
         <?php
         if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
@@ -41,9 +38,9 @@
 
         else : ?>
 
-            <p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'futbalove_travniky' ); ?></p>
+            <p style="min-height: 200px;padding-top: 40px;"><?php esc_html_e( 'Táto kategória zatiaľ neobsahuje žiadny produkt.', 'futbalove_travniky' ); ?></p>
             <?php
-            get_search_form();
+            //get_search_form();
 
         endif; ?>
     </div><!-- .page-content -->

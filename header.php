@@ -65,12 +65,13 @@
         </div>
 
 
-        <div class="wrapper white-menu">
+        <div class="wrapper white-menu site-header__menu-content">
 
             <nav class="primary-nav primary-nav--pull-right">
                 <ul >
 
-                    <li class="submenu"><a>Záhradná technika</a>
+                    <li class="submenu">
+                        <?php echo menu_link("Záhradná technika") ?>
 
                         <div class="submenu__separator">
 
@@ -80,56 +81,63 @@
 
                                 <div class="row">
                                 <div class="row__medium-4">
-                                    <h4>Starostlivosť o trávnik</h4>
+                                    <h4><?php echo menu_link("Starostlivosť o trávnik") ?></h4>
                                     <ul class="submenu__list">
-                                        <li>Aerifikátory</li>
-                                        <li>Kosačky</li>
-                                        <li>Vertikutátory</li>
+                                        <li>Aerifikátor</li>
+                                        <li>Ručná sondírka</li>
+                                        <li>Rozmetadlo</li>
+                                        <li>Štrbinový aplikátor</li>
+                                        <li>Ťahaný zberač</li>
+                                        <li>Vertikutátor</li>
+                                        <li>Zaťahovacia sieť</li>
+                                        <li>Kosačka</li>
+                                        <li>Zlupovačka trávnikov</li>
+                                        <li>Krovinorez</li>
 
                                     </ul>
 
-                                    <h4>Ďaľšia kategória</h4>
-                                    <ul class="submenu__list">
-                                        <li>Rozmetadlá</li>
-                                        <li>Krovinorezy</li>
-                                        <li>Zberače</li>
-                                        <li>Snehové frézy</li>
-                                    </ul>
+
                                 </div>
 
                                 <div class="row__medium-4">
-                                    <h4>Ostatná technika</h4>
+                                    <h4><?php echo menu_link("Spracovanie dreva") ?></h4>
                                     <ul class="submenu__list">
-                                        <li>Motorové píly</li>
-                                        <li>Sondírky</li>
-                                        <li>Štiepačky</li>
-                                        <li>Zametacie kefy</li>
+                                        <li>Drvič konárov Axo</li>
+                                        <li>Štiepačka</li>
                                     </ul>
 
-                                    <h4>Práca s drevom</h4>
+
+                                    <h4><?php echo menu_link("Jazierko") ?></h4>
                                     <ul class="submenu__list">
-                                        <li>Drviče konárov</li>
-                                        <li>Zberače</li>
-                                        <li>Zaťahovacie siete</li>
-                                        <li>Záhradné valce</li>
+                                        <li>Jazierkový vysávač</li>
+                                    </ul>
+
+
+                                    <h4><?php echo menu_link("Zimná úržba") ?></h4>
+                                    <ul class="submenu__list">
+                                        <li>Snehová fréza Toro</li>
+                                        <li>Snehová fréza Husqvarna</li>
                                     </ul>
                                 </div>
 
                                     <div class="row__medium-4">
-                                        <h4>Starostlivosť o trávnik</h4>
+                                        <h4><?php echo menu_link("Spracovanie pôdy") ?></h4>
                                         <ul class="submenu__list">
-                                            <li>Aerifikátory</li>
-                                            <li>Kosačky</li>
-                                            <li>Vertikutátory</li>
+                                            <li>Ručný zhutňovač</li>
+                                            <li>Záhradný valec</li>
+                                        </ul>
+
+                                        <h4><?php echo menu_link("Údržba stromov") ?></h4>
+                                        <ul class="submenu__list">
+                                            <li>Teleskopický hák a píla</li>
 
                                         </ul>
 
-                                        <h4>Ďaľšia kategória</h4>
+                                        <h4><?php echo menu_link("Iné záhradnícke práce") ?></h4>
                                         <ul class="submenu__list">
-                                            <li>Rozmetadlá</li>
-                                            <li>Krovinorezy</li>
-                                            <li>Zberače</li>
-                                            <li>Snehové frézy</li>
+                                            <li>Rudla</li>
+                                            <li>Zametacia kefa</li>
+                                            <li>Kompresor</li>
                                         </ul>
                                     </div>
 
@@ -142,8 +150,8 @@
                         </div>
                     </li>
                     <li><a>Stavebné náradie</a></li>
-                    <li><a>Iné</a></li>
-                    <li><a>Pripravujeme</a></li>
+<!--                    <li><a>Iné</a></li>-->
+<!--                    <li><a>Pripravujeme</a></li>-->
                     <li><a>Cenník</a></li>
                     <li><a>Kontakt</a></li>
 
@@ -152,10 +160,14 @@
 
 
             </nav>
+        </div>
+
 
             <div class="site-header__menu-icon">
                 <div class="site-header__menu-icon__middle"></div>
             </div>
+
+
 
 
 

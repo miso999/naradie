@@ -17,10 +17,12 @@
 
   /* Show the submenu menu on hover */
   &:hover &__content {
+    @mixin atMedium {
     display: block;
     opacity: 1;
     visibility: visible;
     height: 330px;
+    }
   }
 
   &__separator {
@@ -37,8 +39,15 @@
 
   & h4 {
 
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     padding:0;
+
+    a {
+      color: $darkColor;
+      font-weight:bold;
+      text-transform: none;
+      font-size:;
+    }
   }
 
   &__list li {
