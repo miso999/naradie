@@ -42,7 +42,7 @@ get_header(); ?>
                     </div>
 
                     <div class="btn">
-                        Náš sortiment
+                        <a href="/produkty/zahradna-technika/" style="color:#fff;text-decoration: none;">Náš sortiment</a>
                     </div>
                 </div>
 

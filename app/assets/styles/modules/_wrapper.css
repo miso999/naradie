@@ -48,4 +48,12 @@
     }
   }
 
+  &--flex {
+    display: flex;
+    flex-direction: column;
+    @mixin atMedium {
+      display: block;
+    }
+  }
+
 }

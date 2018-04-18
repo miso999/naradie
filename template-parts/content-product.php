@@ -6,7 +6,6 @@
  * Time: 10:04
  */
 
-echo "<br><br>";
 
 if ($_POST['start-date'] && $_POST['end-date'] && !$_POST['range_control']) {
 
@@ -27,10 +26,10 @@ if ($_POST['start-date'] && $_POST['end-date'] && !$_POST['range_control']) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <div class="wrapper">
+    <div class="wrapper wrapper--flex">
 
 
-        <div class="row__medium-4">
+        <div class="row__medium-4 row--order2">
             <h3>Dostupnosť</h3>
             <div id="dostupnost"></div>
             <div class="vysvetlivky">
@@ -41,7 +40,7 @@ if ($_POST['start-date'] && $_POST['end-date'] && !$_POST['range_control']) {
         </div>
 
 
-        <div class="row__medium-8">
+        <div class="row__medium-8 row--order1">
 
             <div class="product-page">
                 <div class="row row--gutters">

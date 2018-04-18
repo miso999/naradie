@@ -27,6 +27,7 @@ class Modal {
     openModal() {
         var modal_id = $(this).attr('data-modal-id');
         $('#' + modal_id).addClass('modal--show');
+        $(window).scrollTop(0);
         return false;
     }
 

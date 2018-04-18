@@ -677,6 +677,23 @@ table th,table td,table tr {
   }
   }
 
+.wrapper--flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+@media (min-width: 50rem) {
+
+.wrapper--flex {
+      display: block
+  }
+  }
+
 .page-section {
   padding: 1.2rem 0;
 
@@ -793,6 +810,36 @@ table th,table td,table tr {
     content: "";
     clear: both;
     display: table;
+  }
+
+.row--order1 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+@media (min-width: 50rem) {
+
+.row--order1 {
+      -webkit-box-ordinal-group:3;
+          -ms-flex-order:2;
+              order:2
+  }
+  }
+
+.row--order2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+@media (min-width: 50rem) {
+
+.row--order2 {
+      -webkit-box-ordinal-group:2;
+          -ms-flex-order:1;
+              order:1
+  }
   }
 
 .row--t-padding {
@@ -1273,7 +1320,7 @@ Instead edit gulp/templates/sprite */
 }
 
 .site-header--expanded {
-   background-color: rgba(91,156,31, .96);
+   background-color: rgba(91,156,31, .85);
    z-index: 5;
 
  }
@@ -1305,6 +1352,8 @@ Instead edit gulp/templates/sprite */
 .site-header__logo {
    float: left;
 
+
+
 }
 
 @media (min-width: 50rem) {
@@ -1312,11 +1361,20 @@ Instead edit gulp/templates/sprite */
 .site-header__logo {
     display: block
 
+
+
 }
   }
 
 .site-header__logo img {
-    width:7.5rem;
+    width:5rem;
+  }
+
+@media (min-width: 50rem) {
+
+.site-header__logo img {
+      width:7.5rem
+  }
   }
 
 .site-header__logo__graphic {
@@ -1327,7 +1385,7 @@ Instead edit gulp/templates/sprite */
    width: 1.25rem;
    height: 1.1875rem;
    position: absolute;
-   top: 1.5625rem;
+   top: 0.9375rem;
    right: 0.9375rem;
    z-index: 10;
 }
@@ -1436,12 +1494,16 @@ Instead edit gulp/templates/sprite */
      display: none;
    }
 
+@media (min-width: 50rem) {
+
 .site-header__top-block .middle {
-   position: relative;
-   top: 50%;
-   -webkit-transform: translateY(-50%);
-           transform: translateY(-50%);
+     position: relative;
+     top: 50%;
+     -webkit-transform: translateY(-50%);
+             transform: translateY(-50%)
+
  }
+  }
 
 @media (min-width: 33.125rem) {
 
@@ -1452,8 +1514,15 @@ Instead edit gulp/templates/sprite */
 
 .site-header--dark .site-header__top-block {
   background: rgba(91,156,31, .95);
-display:none;
+  display:block;
 }
+
+@media (min-width: 50rem) {
+
+.site-header--dark .site-header__top-block {
+   display: none
+}
+  }
 
 .site-header__info {
    float: right;
@@ -1465,6 +1534,17 @@ display:none;
 .site-header__info {
     display: block
  }
+  }
+
+.site-header__outer {
+    height: 8.75rem;
+  }
+
+@media (min-width: 50rem) {
+
+.site-header__outer {
+      height: 4.5625rem
+  }
   }
 
 .primary-nav {
@@ -1913,17 +1993,31 @@ padding: 0.625rem;
       max-height: 12.5rem;
       position: absolute;
       bottom: 0;
+      left:50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
     }
 
 .search-box {
-    float: right;
-    padding-left: 3.125rem;
-    margin-right: 2.5rem;
+    float: left;
+    padding-left: 0rem;
+    margin-right: 0rem;
+    width:100%;
 }
+
+@media (min-width: 50rem) {
+
+.search-box {
+      float: right;
+      padding-left: 3.125rem;
+      margin-right: 2.5rem;
+      width:18.75rem
+}
+  }
 
 .container-4{
     overflow: hidden;
-    width: 100%;
+    width:100%;
     vertical-align: middle;
     white-space: nowrap;
 

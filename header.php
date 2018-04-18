@@ -31,36 +31,31 @@
 
     <header class="site-header">
 
-
-
-
         <div class="site-header__top-block" >
             <div class="wrapper">
-
 <!--                <div style="background:blue;height: 55px">-->
 <!--                    <div class="middle" style="float:left;background:red;">A</div>-->
 <!--                    <div class="middle" style="float: right;background:orange;">B<br>B<br>B</div>-->
 <!--                    <div class="middle" style="float: right;background:green;">C</div>-->
 <!--                </div>-->
 
-                <div style="height: 73px">
-
-                <div class="site-header__logo middle" >
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="">
-                </div>
-
+                <div class="site-header__outer">
+                    <div class="site-header__logo middle">
+                        <a href="/">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="">
+                        </a>
+                    </div>
                     <div class="search-box middle">
                         <div class="container-4">
-                            <input type="search" id="search" placeholder="Hľadať..." />
+                            <input type="search" id="search" placeholder="Hľadať..."/>
                             <button class="icon"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
-
                     <div class="site-header__info middle">
-                        <i class="fa fa-phone"></i>   0908 716 007
-                        <i class="fa fa-envelope" style="padding-left: 15px;"></i>   pozicovnapzt@gmail.com
+                        <i class="fa fa-phone"></i> 0908 716 007
+                        <i class="fa fa-envelope" style="padding-left: 15px;"></i> pozicovnapzt@gmail.com
                     </div>
-            </div>
+                </div>
         </div>
         </div>
 
@@ -149,7 +144,9 @@
 
                         </div>
                     </li>
-                    <li><a>Stavebné náradie</a></li>
+                    <li>
+                        <?php echo menu_link("Stavebné náradie") ?>
+                    </li>
 <!--                    <li><a>Iné</a></li>-->
 <!--                    <li><a>Pripravujeme</a></li>-->
                     <li><a>Cenník</a></li>

@@ -1,14 +1,22 @@
 .search-box {
-    float: right;
-    padding-left: 50px;
-    margin-right: 40px;
+    float: left;
+    padding-left: 0px;
+    margin-right: 0px;
+    width:100%;
+    @mixin atMedium {
+      float: right;
+      padding-left: 50px;
+      margin-right: 40px;
+      width:300px;
+    }
 }
 
 .container-4{
     overflow: hidden;
-    width: 100%;
+    width:100%;
     vertical-align: middle;
     white-space: nowrap;
+
 
     @mixin atMedium {
         width: 300px;

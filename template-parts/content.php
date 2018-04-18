@@ -18,7 +18,7 @@
             $image = get_the_post_thumbnail_url($post_id, 'large');
             ?>
             <a href="<?php echo esc_url( get_permalink() ) ?>" >
-            <img src="<?php echo $image; ?>" class="img-responsive" alt="">
+            <img src="<?php echo $image; ?>" alt="">
             </a>
         </div>
         <div class="fav-item__title">

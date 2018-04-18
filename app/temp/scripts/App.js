@@ -10829,10 +10829,6 @@ var StickyHeader = function () {
         this.header = (0, _jquery2.default)('.site-header');
         this.triggerElement = (0, _jquery2.default)('.white-menu');
         this.fixOnScroll();
-        this.pageSection = (0, _jquery2.default)('.page-section');
-        this.navLinks = (0, _jquery2.default)('.primary-nav a');
-        this.sectionWaypoint();
-        this.addSmoothScroll({});
         this.refreshWaypoints();
     }
 
@@ -10840,12 +10836,6 @@ var StickyHeader = function () {
         key: 'refreshWaypoints',
         value: function refreshWaypoints() {
             Waypoint.refreshAll();
-        }
-    }, {
-        key: 'addSmoothScroll',
-        value: function addSmoothScroll() {
-            // this.navLinks.smoothScroll({offset: -300});
-            (0, _jquery2.default)('a').smoothScroll({ offset: -62 });
         }
     }, {
         key: 'fixOnScroll',
@@ -10856,38 +10846,6 @@ var StickyHeader = function () {
                 handler: function handler() {
                     config.header.toggleClass('site-header--dark');
                 }
-            });
-        }
-    }, {
-        key: 'sectionWaypoint',
-        value: function sectionWaypoint() {
-            var config = this;
-            this.pageSection.each(function () {
-                var currentSection = this;
-                new Waypoint({
-                    element: currentSection,
-                    handler: function handler(direction) {
-                        if (direction == 'down') {
-                            var pageLink = currentSection.getAttribute('data-section-link');
-                            config.navLinks.removeClass('active');
-                            if ((0, _jquery2.default)(window).scrollTop() > 400) {
-                                (0, _jquery2.default)(pageLink).addClass('active');
-                            }
-                        }
-                    },
-                    offset: "18%"
-                });
-                new Waypoint({
-                    element: currentSection,
-                    handler: function handler(direction) {
-                        if (direction == 'up') {
-                            var pageLink = currentSection.getAttribute('data-section-link');
-                            config.navLinks.removeClass('active');
-                            (0, _jquery2.default)(pageLink).addClass('active');
-                        }
-                    },
-                    offset: "-40%"
-                });
             });
         }
     }]);
@@ -11318,6 +11276,7 @@ var Modal = function () {
         value: function openModal() {
             var modal_id = (0, _jquery2.default)(this).attr('data-modal-id');
             (0, _jquery2.default)('#' + modal_id).addClass('modal--show');
+            (0, _jquery2.default)(window).scrollTop(0);
             return false;
         }
     }, {
